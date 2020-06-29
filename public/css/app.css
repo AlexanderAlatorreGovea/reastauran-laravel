@@ -145,10 +145,6 @@ table {
   border-spacing: 0;
 }
 
-#about-page {
-  padding: 100px;
-}
-
 #about-page h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -163,21 +159,65 @@ table {
   font-weight: 500;
 }
 
+#about-page #submit-about_btn {
+  border-radius: 10px;
+  background-color: black;
+}
+
+#about-page #submit-about_btn:hover {
+  background-color: red;
+  color: black;
+}
+
 @media (min-width: 0px) and (max-width: 767px) {
   #about-page {
-    padding: 20px;
+    margin-top: 5rem;
+    padding: 0px;
+  }
+
+  #title-reservation {
+    font-size: 25px;
+  }
+
+  #margin-normalize {
+    margin: 0px;
+  }
+
+  #normalize-top_margin {
+    padding-top: 0px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   #about-page {
+    margin-top: 5rem;
     padding: 20px;
   }
 }
 
 #contact-page {
   padding: 100px;
-  padding-top: 12rem;
+  padding-top: 5rem;
+}
+
+#contact-page .wrap-form-reservation #submit-btn {
+  border-radius: 10px;
+  background-color: black;
+}
+
+#contact-page .wrap-form-reservation #submit-btn:hover {
+  background: red;
+  color: black;
+}
+
+#contact-page #contact-us_title {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.2;
+  color: #222222;
+  text-transform: uppercase;
+  letter-spacing: 6px;
 }
 
 #contact-page h1 {
@@ -207,13 +247,27 @@ table {
 
 @media (min-width: 0px) and (max-width: 767px) {
   #contact-page {
-    padding: 20px;
+    margin-top: 5rem;
+    padding: 0px;
+  }
+
+  #contact-page #contact-us_title {
+    font-size: 25px;
+  }
+
+  #contact-page #bottom-contact {
+    padding-top: 60px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   #contact-page {
     padding: 20px;
+    margin-top: 5rem;
+  }
+
+  #contact-page #bottom-contact {
+    padding-top: 60px;
   }
 }
 
@@ -267,7 +321,8 @@ table {
 
 @media (min-width: 0px) and (max-width: 767px) {
   #waitlist-page {
-    padding: 20px;
+    padding: 0px;
+    margin-top: 5rem;
   }
 
   #waitlist-page h1 {
@@ -383,7 +438,7 @@ table {
 
 @media (min-width: 0px) and (max-width: 767px) {
   #menu-page {
-    padding: 20px;
+    padding: 0px;
     height: 100vh;
     padding-top: 5rem;
   }
@@ -401,11 +456,14 @@ table {
   padding: 100px;
 }
 
+#single-menu-page .section-mainmenu {
+  min-height: 624px;
+}
+
 #single-menu-page h1 {
-  font-size: 3rem;
+  font-size: 2.3rem;
   font-weight: 700;
   color: #ed4852;
-  margin-bottom: 2rem;
 }
 
 #single-menu-page .item {
@@ -426,15 +484,37 @@ table {
   font-weight: 900;
 }
 
+#single-menu-page .line-item-mainmenu {
+  flex-grow: 1;
+  height: 2px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
 @media (min-width: 0px) and (max-width: 767px) {
   #single-menu-page {
-    padding: 20px;
+    padding: 0px;
+    margin-top: 5rem;
+  }
+
+  .line-item-mainmenu {
+    display: none;
+  }
+
+  .price-item-mainmenu {
+    padding-top: 5px;
+  }
+
+  .name-item-mainmenu {
+    width: 100%;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   #single-menu-page {
     padding: 20px;
+    margin-top: 5rem;
   }
 }
 
@@ -11100,6 +11180,14 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
   -webkit-box-shadow: 0 16px 35px 0px rgba(15, 46, 81, 0.2);
   -o-box-shadow: 0 16px 35px 0px rgba(15, 46, 81, 0.2);
   -ms-box-shadow: 0 16px 35px 0px rgba(15, 46, 81, 0.2);
+}
+
+#image-gallery {
+  display: block;
+  position: relative;
+  width: calc((100% - 50px) / 4 );
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 /*[ Gradient ]

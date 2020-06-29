@@ -15,6 +15,7 @@
                 @endif
             @yield('content')
             </section>
+            @include('includes.footer')
         </section>
 
         <script src="/assets/vendor/jquery/jquery-3.3.1.min.js"></script>

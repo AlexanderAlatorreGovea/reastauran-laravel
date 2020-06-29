@@ -3679,6 +3679,13 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
   -ms-box-shadow: 0 16px 35px 0px rgba(15, 46, 81, 0.2);
 }
 
+#image-gallery {
+	display: block;
+    position: relative;
+    width: calc((100% - 50px) / 4 );
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
 
 /*[ Gradient ]
 -----------------------------------------------------------

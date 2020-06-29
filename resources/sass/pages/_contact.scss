@@ -1,7 +1,26 @@
 #contact-page {
     padding: 100px;
-    padding-top: 12rem;
-    h1 {
+    padding-top: 5rem;
+    .wrap-form-reservation {
+        #submit-btn {
+            border-radius: 10px;
+            background-color: black;
+            &:hover {
+                background: red;
+                color: black;
+            }
+        }
+    }
+    #contact-us_title {
+        font-family: Poppins;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 1.2;
+        color: #222222;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+    }
+    h1 { 
         font-size: 3rem;
         font-weight: 700;
         color: black;
@@ -25,7 +44,14 @@
 }
 @media (min-width: 0px) and (max-width: 767px) {
     #contact-page {
-        padding: 20px;
+        margin-top: 5rem;
+        padding: 0px;
+        #contact-us_title {
+            font-size: 25px;
+        }
+        #bottom-contact {
+            padding-top: 60px;
+        }
     }
 }
 
@@ -33,6 +59,10 @@
 @media (min-width: 768px) and (max-width: 991px) {
     #contact-page {
         padding: 20px;
+        margin-top: 5rem;
+        #bottom-contact {
+            padding-top: 60px;
+        }
     }
 }
 

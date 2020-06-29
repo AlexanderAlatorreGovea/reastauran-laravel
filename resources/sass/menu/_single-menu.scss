@@ -1,10 +1,15 @@
 #single-menu-page {
     padding: 100px;
+    .section-mainmenu {
+        min-height: 624px;
+    }
     h1 {
-        font-size: 3rem;
+        font-size: 2.3rem;
         font-weight: 700;
         color: #ed4852;
-        margin-bottom: 2rem;
+    }
+    h1 {
+
     }
     .item {
         margin-bottom: 2rem;
@@ -21,17 +26,37 @@
             font-weight: 900;
         }
     }
+    .line-item-mainmenu {
+        flex-grow: 1;
+        height: 2px;
+        margin-bottom: 5px;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
 }
 @media (min-width: 0px) and (max-width: 767px) {
     #single-menu-page {
-        padding: 20px;
-    }
+        padding: 0px;
+        margin-top: 5rem;
+    } 
+    .line-item-mainmenu {
+        display: none;
+      }
+    
+      .price-item-mainmenu {
+        padding-top: 5px;
+      }
+    
+      .name-item-mainmenu {
+        width: 100%;
+      }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991px) {
     #single-menu-page {
         padding: 20px;
+        margin-top: 5rem;
     }
 }
 

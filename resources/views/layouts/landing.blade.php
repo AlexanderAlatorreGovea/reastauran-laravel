@@ -16,7 +16,7 @@
     </div>
   </section>
   @yield('content')  
-
+ 
   <script src="/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
 
   <script>

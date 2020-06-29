@@ -8,6 +8,5 @@ Food Menu
     <div id="menu-page">
       
       @include('includes.food-categories-slider')
-       
     </div>
 @endsection
