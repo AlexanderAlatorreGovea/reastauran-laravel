@@ -56,7 +56,7 @@ Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@e
 Route::put('/admin/food-categories/{id}', 'admin\FoodCategoriesController@update')->middleware('role:Admin');
 Route::delete('/admin/food-categories/{id}/delete', 'admin\FoodCategoriesController@delete')->middleware('role:Admin');
  
-
+ 
 // Admin Food Items
 Route::get('/admin/food-items', 'admin\FoodItemsController@index')->middleware('role:Admin');
 Route::get('/admin/food-items/create', 'admin\FoodItemsController@create')->middleware('role:Admin');
@@ -64,10 +64,12 @@ Route::post('/admin/food-items', 'admin\FoodItemsController@store')->middleware(
 Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit')->middleware('role:Admin');
 Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update')->middleware('role:Admin');
 Route::delete('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete')->middleware('role:Admin');
-
+ 
 // Admin Members
 Route::get('/admin/members', 'admin\MemberController@index');
 Route::delete('/admin/members/{id}/delete', 'admin\MemberController@delete');
+Route::get('/admin/members/{id}/edit', 'admin\MemberController@edit');
+Route::put('/admin/members/{id}', 'admin\MemberController@update');
 
 // Admin Settings
 Route::get('/admin/settings/general', 'admin\SettingController@general')->middleware('role:Admin');

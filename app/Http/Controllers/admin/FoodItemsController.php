@@ -44,9 +44,9 @@ class FoodItemsController extends Controller
         $item->category_id = request('category_id');
         $item->save();
 
-       
+        
         return redirect('/admin/food-items');
-    }
+    } 
     public function edit($id){
         $item = FoodItem::find($id);
         $categories = FoodCategory::All();

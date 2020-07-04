@@ -42,23 +42,29 @@
                                                 <th scope="col">Phone Number</th>
                                                 <th scope="col">Date</th>
                                                 <th scope="col">Delete</th>
+                                                <th scope="col">Edit</th>
                                             </tr>
-                                        </thead>
+                                        </thead> 
                                         <tbody>
                                             @foreach ($members as $member)
-                                                <tr>
+                                                <tr> 
                                                     <th scope="row">{{$member->id}}</th>
                                                     <td>{{$member->fname}} {{$member->lname}}</td>
                                                     <td>{{$member->email}}</td>
                                                     <td>{{$member->phone_number}}</td>
                                                     <td>{{date('m/d/Y', strtotime($member->updated_at))}}</td>
-                                                    
                                                     <td>
                                                         
-                                                        <a href="#" onclick="event.preventDefault();
-                                document.getElementById('delete-member-{{$member->id}}').submit();">
+                                                        <a href="#" 
+                                                        onclick="event.preventDefault();
+                                                        document.getElementById('delete-member-{{$member->id}}').submit();">
                                     <i class="far fa-trash-alt"></i>
-                                </a>
+                                </a> 
+                                <td>
+                                    <a href="/admin/members/{{$member->id}}/edit">
+                                        <i class="far fa-edit"></i>
+                                    </a>
+                                </td>
                                 <form id="delete-member-{{$member->id}}" action="/admin/members/{{$member->id}}/delete" method="POST" style="display: none;">
                                                 @method('DELETE')
                                                 @csrf
