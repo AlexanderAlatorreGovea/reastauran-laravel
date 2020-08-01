@@ -4,26 +4,29 @@ namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
 use App\Reservation;
 
 class ReservationController extends Controller
 {
-    public function __construct()
-    {
+    public function __construct() {
         $this->middleware('auth');
     }
     
-    public function index(){
+    public function index() {
         $reservations = Reservation::paginate(10);
 
         return view('admin/reservations/all', [
             'reservations' => $reservations
         ]);
     }
+
     public function create(){
         return view('admin/reservations/create');
     }
-    public function store(){
+
+
+    public function store() {
         request()->validate([
             'fname' => ['required', 'string'],
             'lname' => ['required', 'string'],
@@ -40,18 +43,18 @@ class ReservationController extends Controller
         $reservation->guests_total = request('guests_total');
         $reservation->time = request('time');
         $reservation->save();
-
-       
+ 
         return redirect('/admin/reservations');
     }
-    public function edit($id){
+    public function edit($id) {
         $reservation = Reservation::find($id);
         
         return view('admin/reservations/edit', [
             'reservation' => $reservation
         ]);
     }
-    public function update($id){
+ 
+    public function update($id) {
         request()->validate([
             'fname' => ['required', 'string'],
             'lname' => ['required', 'string'],
@@ -73,9 +76,11 @@ class ReservationController extends Controller
         return redirect('/admin/reservations');
 
     }
+
     public function delete($id){
         $reservation = Reservation::find($id);
         $reservation->delete();
         return redirect('/admin/reservations');
     }
+
 }

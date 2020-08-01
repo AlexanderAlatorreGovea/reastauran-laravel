@@ -107,14 +107,16 @@
     };
 
     let header = document.querySelector(".wrap-menu-header");
-
+    let logo = document.getElementById("logo-top");
     let sticky = header.offsetTop;
   
     function addOpacity() {
       if (window.pageYOffset > sticky) {
         header.classList.add("opacity");
+        logo.classList.add("shrink-logo");
       } else {
         header.classList.remove("opacity");
+        logo.classList.remove("shrink-logo");
       }
     }
 
@@ -131,6 +133,14 @@
         header.classList.add("sticky");
       }
     }
+
+    //CLOSE MESSAGE POPUP AFTER SIGNING UP TO EMAIL LIST
+    const alert = document.getElementById('message');
+    const closeBtn = document.getElementById('close');
+
+    closeBtn.addEventListener('click', () => {
+      alert.style.display = 'none';
+    });
 
   </script>
     </body>

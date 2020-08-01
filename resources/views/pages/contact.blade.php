@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-About - {{$settings["general"]->site_title}} 
+About - {{$settings["general"]->site_title}}
 @endsection
 
 @section('content')
@@ -13,30 +13,36 @@ About - {{$settings["general"]->site_title}}
 			</span>
 			<h3 id="contact-us_title" class="tit3 t-center m-b-35 m-t-2">
 				Reach out to us
-			</h3>
+			</h3> 
 		  </div>
 		<!-- Map -->
 		<div class="container">
 			<div class="map bo8 bo-rad-10 of-hidden">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3591.8140418344683!2d-80.21037164997058!3d25.809708312831688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b14a3b8bbaa7%3A0xea85c8a06c579c54!2sBurger%20King!5e0!3m2!1sen!2sus!4v1583531624923!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 			</div>
-		</div>
+		</div> 
 
 		<div class="container">
 			<h3 class="tit7 t-center p-b-62 p-t-105">
 				Send us a Message
 			</h3>
 
-			<form class="wrap-form-reservation size22 m-l-r-auto">
+			<form method="POST" action="/contact" class="wrap-form-reservation size22 m-l-r-auto">
+				@csrf 
 				<div class="row">
 					<div class="col-md-4">
-						<!-- Name -->
+						<!-- Name -->  
 						<span class="txt9">
 							Name
 						</span>
 
 						<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
-							<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" placeholder="Name">
+							<input class="bo-rad-10 sizefull txt10 p-l-20 @error('email') is-invalid @enderror" type="text" name="name"value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Name">
+							@error('name')
+								<span class="invalid-feedback" role="alert">
+									<strong>{{ $message }}</strong>
+								</span>
+							@enderror
 						</div>
 					</div>
 
@@ -47,7 +53,13 @@ About - {{$settings["general"]->site_title}}
 						</span>
 
 						<div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
-							<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email" placeholder="Email">
+							<input id="inputfname" type="text" class="bo-rad-10 sizefull txt10 p-l-20 @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
+
+							@error('email')
+								<span class="invalid-feedback" role="alert">
+									<strong>{{ $message }}</strong>
+								</span>
+							@enderror
 						</div>
 					</div>
 
@@ -58,7 +70,13 @@ About - {{$settings["general"]->site_title}}
 						</span>
 
 						<div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
-							<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="phone" placeholder="Phone">
+							<input id="phone" type="text" class="bo-rad-10 sizefull txt10 p-l-20 @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus placeholder="Phone">
+
+							@error('phone')
+								<span class="invalid-feedback" role="alert">
+									<strong>{{ $message }}</strong>
+								</span>
+							@enderror
 						</div>
 					</div>
 
@@ -66,8 +84,15 @@ About - {{$settings["general"]->site_title}}
 						<!-- Message -->
 						<span class="txt9">
 							Message
-						</span>
-						<textarea class="bo-rad-10 size35 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-3" name="message" placeholder="Message"></textarea>
+						</span> 
+
+						<textarea id="message" type="text" class="bo-rad-10 size35 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-3 @error('message') is-invalid @enderror" name="message" value="{{ old('message') }}" required autocomplete="message" autofocus placeholder="Message"></textarea>
+
+						@error('message')
+							<span class="invalid-feedback" role="alert">
+								<strong>{{ $message }}</strong>
+							</span>
+						@enderror
 					</div>
 				</div>
 

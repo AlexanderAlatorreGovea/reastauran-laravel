@@ -27,11 +27,6 @@ Route::get('/offers', 'StaticPagesController@offers');
 Route::post('/offers', 'StaticPagesController@registerMember');
 Route::get('/offers/thank-you', 'StaticPagesController@thankYou');
 
-
-Route::get('/app', function () {
-    return view('test');
-});
-
 Route::get('/giftcards', function () {
     return view('pages/giftcards');
 });
@@ -79,7 +74,7 @@ Route::put('/admin/settings/seo', 'admin\SettingController@saveSeo')->middleware
 Route::get('/admin/settings/social', 'admin\SettingController@social')->middleware('role:Admin');
 Route::put('/admin/settings/social', 'admin\SettingController@saveSocial')->middleware('role:Admin');
 
-// Admin Users
+// Admin Users 
 Route::get('/admin/users', 'admin\UsersController@index')->middleware('role:Admin');
 Route::get('/admin/users/create', 'admin\UsersController@create')->middleware('role:Admin');
 Route::post('/admin/users', 'admin\UsersController@store')->middleware('role:Admin');
@@ -92,13 +87,32 @@ Route::delete('/admin/users/{id}/delete', 'admin\UsersController@delete')->middl
 Route::get('/admin/reservations', 'admin\ReservationController@index');
 Route::delete('/admin/reservations/{id}/delete', 'admin\ReservationController@delete');
 
+//CART
+Route::get('/cart', 'CartController@index');
+Route::get('/add-to-cart/{id}', 'CartController@addToCart');
+Route::get('/checkout', 'CartController@checkout');
+Route::patch('/update-cart', 'CartController@updateCart');
+Route::delete('/remove-from-cart', 'CartController@remove');
+Route::post('/charge', 'CartController@charge');
+Route::get('/all-menu-items', 'StaticPagesController@allMenuItems');
+
+// COLLECT SIGNUP EMAILS 
+Route::post('/sendemail/send', 'SendEmailController@sendEmail');
+
+// BLOG
+Route::get('/blog', 'BlogController@allBlogs');
+Route::get('/blog/{slug}', 'BlogController@blog');
+ 
+//MESSAGE CONTROLLER
+Route::post('/contact', 'admin\MessageController@store');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'pages/thank-you', 'menu.menu', 'menu.all-categories', 'menu.single-menu'], function ($view) {
+View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'pages/thank-you', 'menu.menu', 'menu.all-categories', 'menu.all-menu-items', 'menu.single-menu', 'cart/cart', 'cart/checkout', 'blog/all-blogs'], function ($view) {
     $generalSettings = GeneralSetting::find(1);
     $socialSettings = SocialSetting::find(1);
     $seoSettings = SeoSetting::find(1);

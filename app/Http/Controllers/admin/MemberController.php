@@ -32,7 +32,7 @@ class MemberController extends Controller
              'members' => $members
          ]);
     }
-
+ 
     public function update($id){
         request()->validate([
             'fname' => ['required', 'string', 'max:255'],

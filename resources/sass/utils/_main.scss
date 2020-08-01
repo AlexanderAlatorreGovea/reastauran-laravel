@@ -47,47 +47,6 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
-@font-face {
-  font-family: Montserrat-Regular;
-  src: url('../fonts/montserrat/Montserrat-Regular.ttf'); 
-}
-
-@font-face {
-  font-family: Montserrat-Bold;
-  src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
-}
-
-@font-face {
-  font-family: Courgette-Regular;
-  src: url('../fonts/courgette/Courgette-Regular.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-Regular;
-  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-Medium;
-  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-Light;
-  src: url('../fonts/poppins/Poppins-Light.ttf'); 
-}
-
-@font-face {
-  font-family: NotoSans-Regular;
-  src: url('../fonts/notosans/NotoSans-Regular.ttf'); 
-}
-
-
 
 /*[ RESTYLE TAG ]
 ///////////////////////////////////////////////////////////
@@ -489,7 +448,7 @@ input[type="date" i] {
   top: 0;
   left: 0;
   z-index: 100;
-  border-top: 5px solid #ec1d25;
+  //border-top: 5px solid #ec1d25;
 }
 
 .wrap_header {
@@ -662,7 +621,7 @@ input[type="date" i] {
   color: white;
 }
 
-.header-fixed .social a {7
+.header-fixed .social a {
   color: #222222;
 }
 

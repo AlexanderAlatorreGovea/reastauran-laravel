@@ -5,6 +5,22 @@ About - {{$settings["general"]->site_title}}
 @endsection
 
 @section('content')
+    @if ($message = Session::get('success'))
+        <div id="message" class="alert alert-success alert-block" style="margin-bottom: 0px">
+          <button id="close" type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ $message }}</strong>
+        </div>
+    @endif
+    @if (count($errors) > 0)
+        <div id="message" class="alert alert-danger">
+        <button id="close" type="button" class="close" data-dismiss="alert">×</button>
+        <ul>
+          @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+        </div>
+      @endif
      <div id="about-page">
       <section class="bg2-pattern p-t-116 p-b-110 t-center p-l-15 p-r-15">
         <span class="tit2 t-center">
@@ -160,16 +176,21 @@ About - {{$settings["general"]->site_title}}
             </div>
           </div>
         </div>
-      </section>
-
+      </section> 
+  
       <div class="section-signup bg1-pattern p-t-85 p-b-85">
-        <form class="flex-c-m flex-w flex-col-c-m-lg p-l-5 p-r-5">
+        <form method="post" action="{{ url('/sendemail/send') }}" class="flex-c-m flex-w flex-col-c-m-lg p-l-5 p-r-5">
+          {{ csrf_field() }}
           <span class="txt5 m-10">
             Specials Sign up
           </span>
-    
           <div id="margin-normalize" class="wrap-input-signup size17 bo2 bo-rad-10 bgwhite pos-relative txt10 m-10">
-            <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email-address" placeholder="Email Adrress">
+            <input class="bo-rad-10 sizefull txt10 p-l-20" 
+              type="text" 
+              name="email" 
+              placeholder="Email Adrress"
+              for="email"
+            >
             <i class="fa fa-envelope ab-r-m m-r-18" aria-hidden="true"></i>
           </div>
     

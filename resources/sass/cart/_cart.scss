@@ -1,0 +1,174 @@
+#shopping-cart {
+	h1 {
+		font-size: 4rem;
+		font-weight: 900;
+		align-self: flex-start;
+		color: white;
+		text-align: center;
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+	td, th {
+		color: white;
+	}
+}
+
+#cart {
+	max-width: 1200px;
+	margin: auto;
+}
+.main-section {
+	background-color: #F8F8F8;
+}
+.dropdown {
+	float: right;
+	padding-right: 30px;
+	.dropdown-menu {
+		padding: 20px;
+		top: 30px !important;
+		width: 350px !important;
+		left: -110px !important;
+		box-shadow: 0px 5px 30px black;
+	}
+}
+.btn {
+	border: 0px;
+	margin: 10px 0px;
+	box-shadow: none !important;
+}
+.total-header-section {
+	border-bottom: 1px solid #d2d2d2;
+}
+.total-section {
+	p {
+		margin-bottom: 20px;
+	}
+}
+.cart-detail {
+	padding: 15px 0px;
+	.price {
+		font-size: 12px;
+		margin-right: 10px;
+		font-weight: 500;
+	}
+	.count {
+		color: #C2C2DC;
+	}
+}
+.cart-detail-img {
+	img {
+		width: 100%;
+		height: 100%;
+		padding-left: 15px;
+	}
+}
+.cart-detail-product {
+	p {
+		margin: 0px;
+		color: #000;
+		font-weight: 500;
+	}
+}
+.checkout {
+	border-top: 1px solid #d2d2d2;
+	padding-top: 15px;
+	.btn-primary {
+		border-radius: 50px;
+		height: 50px;
+	}
+}
+.dropdown-menu {
+	&:before {
+		content: " ";
+		position: absolute;
+		top: -20px;
+		right: 50px;
+		border: 10px solid transparent;
+		border-bottom-color: #fff;
+	}
+}
+.thumbnail {
+	position: relative;
+	padding: 0px;
+	margin-bottom: 20px;
+	img {
+		width: 100%;
+	}
+	.caption {
+		margin: 7px;
+	}
+}
+.page {
+	margin-top: 50px;
+}
+.btn-holder {
+	text-align: center;
+}
+.table {
+	>tbody {
+		>tr {
+			>td {
+				vertical-align: middle;
+			}
+		}
+	}
+	>tfoot {
+		>tr {
+			>td {
+				vertical-align: middle;
+			}
+		}
+	}
+}
+@media screen and (max-width: 600px) {
+	table#cart {
+		tbody {
+			td {
+				.form-control {
+					width: 20%;
+					display: inline !important;
+				}
+				display: block;
+				padding: .6rem;
+				min-width: 320px;
+				&:before {
+					content: attr(data-th);
+					font-weight: bold;
+					display: inline-block;
+					width: 8rem;
+				}
+			}
+			tr {
+				td {
+					&:first-child {
+						background: #333;
+						color: #fff;
+					}
+				}
+			}
+		}
+		thead {
+			display: none;
+		}
+		tfoot {
+			td {
+				display: block;
+				.btn {
+					display: block;
+				}
+			}
+		}
+	}
+	.actions {
+		.btn {
+			width: 36%;
+			margin: 1.5em 0;
+		}
+		.btn-info {
+			float: left;
+		}
+		.btn-danger {
+			float: right;
+		}
+	}
+}

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+ 
 @section('title')
 {{$foodItem}} - {{$settings["general"]->site_title}} 
 @endsection

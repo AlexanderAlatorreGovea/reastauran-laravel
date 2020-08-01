@@ -82,7 +82,7 @@
 
         <script src="/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
 
-  <script>
+  {{-- <script>
     let slides = $('.sliding-system a.slide').length;
     let maxSlides;
     let moveTotal;
@@ -164,14 +164,16 @@
     };
 
     let header = document.querySelector(".wrap-menu-header");
-
+    let logo = document.getElementById("logo-top");
     let sticky = header.offsetTop;
   
     function addOpacity() {
       if (window.pageYOffset > sticky) {
-        header.classList.add("opacity");
+        header.classList.add("opacity"); 
+        logo.classList.add("shrink-logo");
       } else {
         header.classList.remove("opacity");
+        logo.classList.remove("shrink-logo");
       }
     }
 
@@ -189,6 +191,6 @@
       }
     }
 
-  </script>
+  </script> --}}
     </body>
 </html>

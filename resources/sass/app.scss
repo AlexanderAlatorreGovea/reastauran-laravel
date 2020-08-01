@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import "bootstrap.min.css";
 @import "reset";
+@import "cart/cart";
 @import "pages/about";
 @import "pages/contact";
 @import "pages/waitlist";
@@ -11,6 +12,7 @@
 @import "menu/single-menu";
 @import "menu/top-menu";
 @import "utils/utils";
+@import "utils/main";
 @import "home";
 
 body {
@@ -206,6 +208,11 @@ body {
             text-decoration: none;
             color: black;
             font-weight: 700;
+            transition: all .2s ease-in-out;
+            &:hover {
+                color: red;
+                //transition: all .2s ease-in-out;
+            }
             span {
                 margin-right: 20px;
             }
@@ -537,7 +544,165 @@ h2 {
     padding: 20px;
 }
 
+.has-error{
+    border-color:#cc0000;
+    background-color:#ffff99;
+}
 
+.shrink-logo {
+    height: 80%;
+    transition: all 2s ease-in-out;
+}
+
+// .show {
+//     position: absolute; transform: translate3d(-90px, 46px, 0px); top: 0px; left: 0px; will-change: transform;
+// }
+
+.dropdown .dropdown-menu {
+    left: -215px !important;
+    top: 65px !important;
+}
+
+.on {
+    position: absolute;
+    opacity: 1;
+    background-color: #fff;
+    padding: 10px;
+    color: #333;
+}
+
+.bo2 {
+    border: 2px solid #d9d9d9;
+}
+
+.size12 {
+    width: 100%;
+    height: 50px;
+}
+.pos-relative {
+    position: relative;
+}
+
+.input-search-sidebar2 {
+    width: 100%;
+    height: 100%;
+}
+.txt10 {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 14px;
+    color: #666666;
+}
+.p-r-55 {
+    padding-right: 55px;
+}
+.p-l-20 {
+    padding-left: 20px;
+}
+input {
+    outline: none;
+    border: none !important;
+}
+button, input {
+    overflow: visible;
+}
+
+.btn-search-sidebar2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 46px;
+    height: 46px;
+    background-color: #333333;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 0 0px 1px #333333;
+    -moz-box-shadow: 0 0 0px 1px #333333;
+    -webkit-box-shadow: 0 0 0px 1px #333333;
+    -o-box-shadow: 0 0 0px 1px #333333;
+    -ms-box-shadow: 0 0 0px 1px #333333;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.flex-c-m {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+.trans-0-4 {
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+[class^="ti-"], [class*=" ti-"] {
+    font-family: 'themify';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+}
+[type=reset], [type=submit], button, html [type=button] {
+    -webkit-appearance: button;
+}
+button, select {
+    text-transform: none;
+}
+button, input {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+[role=button], a, area, button, input, label, select, summary, textarea {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+.ti-search:before {
+    content: none !important;
+}
+
+.hov-img-zoom {
+    display: block;
+    overflow: hidden;
+}
+.bo-rad-10 {
+    border-radius: 10px;
+}
+.pos-relative {
+    position: relative;
+}
+
+.hov-img-zoom img {
+    width: 100%;
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    vertical-align: middle;
+    border-style: none;
+    overflow: hidden;
+}
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199px) {

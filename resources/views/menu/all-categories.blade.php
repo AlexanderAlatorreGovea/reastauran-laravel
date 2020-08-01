@@ -10,3 +10,5 @@ Food Menu
       @include('includes.food-categories-slider')
     </div>
 @endsection
+
+

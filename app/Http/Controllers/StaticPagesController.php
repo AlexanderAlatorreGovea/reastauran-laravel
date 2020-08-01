@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Notifications\Messages\NexmoMessage;
+use App\Mail\ContactFormMail;
+use Illuminate\Support\Facades\Mail;
 use App\Member;
 use App\Reservation;
 use App\FoodCategory;
@@ -27,16 +30,25 @@ class StaticPagesController extends Controller {
         return view('pages/reservations');
     }
 
+    public function routeNotificationForNexmo($notification) {
+        return $this->phone_number;
+    }
+
+    // public function toNexmo($notifiable) {
+    //     return (new NexmoMessage)
+    //                 ->content('Your have made a reservation!');
+    // }
+
     public function saveReservation(){
         request()->validate([
             'fname' => ['required', 'string'],
-            'lname' => ['required', 'string'],
+            'lname' => ['required', 'string'], 
             'email' => ['required', 'string'],
             'phone_number' => ['required', 'string'],
             'guests_total' => ['required', 'string'],
             'time' => ['required', 'string']
         ]); 
-
+ 
         $reservation = new Reservation();
         $reservation->fname = request('fname');
         $reservation->lname = request('lname');
@@ -45,6 +57,10 @@ class StaticPagesController extends Controller {
         $reservation->guests_total = request('guests_total');
         $reservation->time = request('time');
         $reservation->save();
+
+        (new NexmoMessage())->content('Your have made a reservation!');
+
+        Mail::to('test@test.com')->send(new ContactFormMail($reservation));
 
         return redirect('/reservations/thank-you');
     }
@@ -94,4 +110,12 @@ class StaticPagesController extends Controller {
             "foodItems" => $foodItems
         ]);
     }
-}
+     
+    public function allMenuItems() {
+        $foodItems = FoodItem::all();
+       
+        return view('menu/all-menu-items', [
+            "foodItems" => $foodItems
+        ]); 
+    }
+} 
