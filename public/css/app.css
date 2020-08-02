@@ -176,10 +176,12 @@ table {
 
 .dropdown .dropdown-menu {
   padding: 20px;
-  top: 30px !important;
   width: 350px !important;
-  left: -110px !important;
   box-shadow: 0px 5px 30px black;
+}
+
+.dropdown .dropdown-menu .show {
+  left: -175% !important;
 }
 
 .btn {
@@ -13662,7 +13664,6 @@ h2 {
 }
 
 .dropdown .dropdown-menu {
-  left: -215px !important;
   top: 65px !important;
 }
 
@@ -13828,5 +13829,11 @@ textarea {
   vertical-align: middle;
   border-style: none;
   overflow: hidden;
+}
+
+.dropdown-menu.show {
+  transform: translate3d(0px, 0px, 0px) !important;
+  transform: none;
+  left: -175% !important;
 }
 

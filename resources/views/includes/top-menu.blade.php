@@ -1,6 +1,6 @@
 <header>
     <!-- Header desktop -->
-    <div class="wrap-menu-header gradient1 trans-0-4">
+    <div style="height: 77px;" class="wrap-menu-header gradient1 trans-0-4">
         <div class="menu-btn">
             <div class="menu-btn__burger"></div>
         </div>
@@ -30,7 +30,7 @@
                             </li>
                             <li>
                                 <a href="/offers">Offers</a>
-                            </li>
+                            </li> 
                             <li>
                                 <a href="/contact">Contact</a>
                             </li> 
@@ -39,7 +39,7 @@
                                     <button type="button" class="btn btn-info" data-toggle="dropdown">
                                         <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart <span class="badge badge-pill badge-danger">{{ count((array) session('cart')) }}</span>
                                     </button>
-                                    <div class="dropdown-menu">
+                                    <div class="dropdown-menu" style="transform: none; transform: translate3d(0px, 0px, 0px); left: -175%;">
                                         <div class="row total-header-section">
                                             <div class="col-lg-6 col-sm-6 col-6">
                                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="badge badge-pill badge-danger">{{ count((array) session('cart')) }}</span>
@@ -70,7 +70,7 @@
                                         @endif
                                         <div class="row">
                                             <div class="col-lg-12 col-sm-12 col-12 text-center checkout">
-                                                <a href="{{ url('cart') }}" class="btn btn-primary btn-block">View all</a>
+                                                <a style="padding-top: 14px;" href="{{ url('cart') }}" class="btn btn-primary btn-block">View all</a>
                                             </div>
                                         </div>
                                     </div>
@@ -92,7 +92,7 @@
     let dropdownMenu = document.querySelector('.dropdown-menu');
     let cartPage = document.URL.includes('cart');
     let menuOpen = false;   
-    console.log(document.URL.includes('cart'))    
+    //console.log(document.URL.includes('cart'))    
         dropdown.addEventListener('click', () => {
             if (!document.URL.includes('cart')) {
                 if(!menuOpen) {
@@ -112,18 +112,18 @@
         window.onload = function() {
             // Grab features section from the DOM
             var features = document.querySelector('.dropdown');
-            console.log(features)
+            //console.log(features)
             // Grab dropdown menu from the DOM
             var dropdown = document.getElementsByClassName("dropdown-menu")[0];
             // Creates function to add dropdown menu
             var addMenu = function addDropDownMenu() {
                 dropdown.classList.add("on");
-                console.log("hi");
+                //console.log("hi");
             };
             // Creates function to remove dropdown menu
             var removeMenu = function removeDropDownMenu() {
                 dropdown.classList.remove("on");
-                console.log("bye");
+                //console.log("bye");
             };
             // Add mouse over event to show menu
             features.addEventListener("mouseover", addMenu);

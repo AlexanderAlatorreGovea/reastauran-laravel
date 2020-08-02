@@ -34,10 +34,10 @@
         moveTotal = 20;
         // Right Button
         $('.right-btn').on('click', () => {
-          console.log(slides)
-          console.log(maxSlides)
-          console.log(currentSlide)
-          console.log(moveTotal)
+          //console.log(slides)
+          ///console.log(maxSlides)
+          //console.log(currentSlide)
+          //console.log(moveTotal)
           if(currentSlide < maxSlides){
             currentSlide += 20;
             $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
@@ -45,10 +45,10 @@
         });
         // Left Button
         $('.left-btn').on('click', () => {
-          console.log(slides)
-          console.log(maxSlides)
-          console.log(currentSlide)
-          console.log(moveTotal)
+          //console.log(slides)
+          //console.log(maxSlides)
+          //console.log(currentSlide)
+          //console.log(moveTotal)
           if(currentSlide != 0){
             currentSlide -= 20;
             $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
@@ -65,7 +65,7 @@
         moveTotal = 100;
         // Right Button
         $('.right-btn').on('click', () => {
-          console.log('clicked right btn')
+          // console.log('clicked right btn')
           if(currentSlide < ((maxSlides * 100) - 100)){
             currentSlide += 50;
             $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
@@ -73,7 +73,7 @@
         });
         // Left Button
         $('.left-btn').on('click', () => {
-          console.log('clicked right btn')
+          // console.log('clicked right btn')
           if(currentSlide != 0){
             currentSlide -= 50;
             $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
@@ -82,7 +82,7 @@
       }
     }
     var b = window.matchMedia("(min-width: 768px) and (max-width: 997px");
-    console.log(b)
+    //console.log(b)
     tabletSlider(b);
     b.addListener(tabletSlider);
 

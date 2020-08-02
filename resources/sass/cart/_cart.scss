@@ -20,17 +20,22 @@
 .main-section {
 	background-color: #F8F8F8;
 }
+
 .dropdown {
 	float: right;
 	padding-right: 30px;
 	.dropdown-menu {
-		padding: 20px;
-		top: 30px !important;
+		padding: 20px; 
+		//top: 30px !important;
 		width: 350px !important;
-		left: -110px !important;
+		//left: -110px !important;
 		box-shadow: 0px 5px 30px black;
+		.show {
+			left: -175% !important;
+		}
 	}
 }
+
 .btn {
 	border: 0px;
 	margin: 10px 0px;

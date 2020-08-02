@@ -76,7 +76,7 @@
                                     </div>
 
                                     <p>
-                                        {{ $blog->content }}
+                                        {{ $blog->preview_content }}
                                     </p>
 
                                     <a href="blog/{{ strtolower($newURL) }}" class="dis-block txt4 m-t-30">
@@ -85,7 +85,7 @@
                                     </a>
                                 </div>
                             </div>
-                        @endforeach
+                        @endforeach 
 
                         <!-- Pagination -->
                         <div class="pagination flex-l-m flex-w m-l--6 p-t-25"> 

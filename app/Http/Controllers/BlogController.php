@@ -12,21 +12,31 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function allBlogs()
     {
         $blogs = Blog::paginate(4);
-   
+        //$blog = Blog::all();
+ 
+        // $blog->map(function ($b) {
+        //     return $this->title.push($b->title);
+        // });
+
+        // dd($this->title);
+        
         return view('blog.all-blogs', [ 
             "blogs" => $blogs
         ]); 
     } 
 
     public function blog($slug)
-    {    
-        $article = Blog::where('slug', $slug)->first();
-        return dd($article);
-
-        //return view('blog.single-blog');
+    {     
+        $title = str_replace('-', ' ', strtoupper($slug));
+        $article = Blog::where('title', $title)->first();
+        //return dd($article->id);
+        return view('blog.single-blog', [
+             'article' => $article 
+         ]);
     } 
 
     /**

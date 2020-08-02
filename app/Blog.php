@@ -6,10 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Blog extends Model
 {    
-    protected $fillable = ['title', 'keywords','content', 'author', 'image_url', 'amount_of_comments'];
-
-    public function posts(){ 
-        return $this->hasMany('App\Post');
-    }
+    protected $fillable = ['title', 'keywords', 'full_content' ,'preview_content', 'author', 'image_url', 'amount_of_comments'];
+ 
 }
  

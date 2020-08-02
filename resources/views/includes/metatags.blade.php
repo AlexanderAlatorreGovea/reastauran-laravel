@@ -19,6 +19,8 @@
 <meta name="twitter:description"
   content="{{$settings["seo"]->description}}">
 <meta name="csrf-token" content="{{ csrf_token() }}">
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}" defer></script>
 <!-- Fonts -->
 <link rel="stylesheet" href="/css/app.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">

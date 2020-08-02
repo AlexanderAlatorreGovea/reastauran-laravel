@@ -27,7 +27,7 @@ class MemberController extends Controller
  
     public function edit($id){
         $members = Member::find($id);
-       //dd($members);
+      
          return view('admin/members/edit', [
              'members' => $members
          ]);

@@ -34,11 +34,6 @@ class StaticPagesController extends Controller {
         return $this->phone_number;
     }
 
-    // public function toNexmo($notifiable) {
-    //     return (new NexmoMessage)
-    //                 ->content('Your have made a reservation!');
-    // }
-
     public function saveReservation(){
         request()->validate([
             'fname' => ['required', 'string'],

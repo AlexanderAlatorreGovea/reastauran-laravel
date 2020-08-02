@@ -112,7 +112,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'pages/thank-you', 'menu.menu', 'menu.all-categories', 'menu.all-menu-items', 'menu.single-menu', 'cart/cart', 'cart/checkout', 'blog/all-blogs'], function ($view) {
+View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'pages/thank-you', 'menu.menu', 'menu.all-categories', 'menu.all-menu-items', 'menu.single-menu', 'cart/cart', 'cart/checkout', 'blog/all-blogs', 'blog/single-blog'], function ($view) {
     $generalSettings = GeneralSetting::find(1);
     $socialSettings = SocialSetting::find(1);
     $seoSettings = SeoSetting::find(1);

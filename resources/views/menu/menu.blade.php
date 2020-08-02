@@ -157,18 +157,18 @@ Food Menu - {{$settings["general"]->site_title}}
    window.onload = function() {
           // Grab features section from the DOM
           var features = document.querySelector('.dropdown');
-          console.log(features)
+          //console.log(features)
           // Grab dropdown menu from the DOM
           var dropdown = document.getElementsByClassName("dropdown-menu")[0];
           // Creates function to add dropdown menu
           var addMenu = function addDropDownMenu() {
               dropdown.classList.add("on");
-              console.log("hi");
+              //console.log("hi");
           };
           // Creates function to remove dropdown menu
           var removeMenu = function removeDropDownMenu() {
               dropdown.classList.remove("on");
-              console.log("bye");
+              //console.log("bye");
           };
           // Add mouse over event to show menu
           features.addEventListener("mouseover", addMenu);
@@ -190,7 +190,7 @@ Food Menu - {{$settings["general"]->site_title}}
       moveTotal = 100;
       // Right Button
       $('.right-btn').on('click', () => {
-        console.log('clicked right btn')
+        //console.log('clicked right btn')
         if(currentSlide < maxSlides){
           currentSlide += 100;
           $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
@@ -198,7 +198,7 @@ Food Menu - {{$settings["general"]->site_title}}
       });
       // Left Button
       $('.left-btn').on('click', () => {
-        console.log('clicked right btn')
+       // console.log('clicked right btn')
         if(currentSlide != 0){
           currentSlide -= 100;
           $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
@@ -215,7 +215,7 @@ Food Menu - {{$settings["general"]->site_title}}
       moveTotal = 100;
       // Right Button
       $('.right-btn').on('click', () => {
-        console.log('clicked right btn')
+        //console.log('clicked right btn')
         if(currentSlide < ((maxSlides * 100) - 100)){
           currentSlide += 50;
           $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
@@ -223,7 +223,7 @@ Food Menu - {{$settings["general"]->site_title}}
       });
       // Left Button
       $('.left-btn').on('click', () => {
-        console.log('clicked right btn')
+        //console.log('clicked right btn')
         if(currentSlide != 0){ 
           currentSlide -= 50;
           $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);

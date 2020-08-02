@@ -4,7 +4,7 @@
 About - {{$settings["general"]->site_title}} 
 @endsection
 
-@section('content')
+@section('content') 
     @if ($message = Session::get('success'))
         <div id="message" class="alert alert-success alert-block" style="margin-bottom: 0px">
           <button id="close" type="button" class="close" data-dismiss="alert">×</button>
@@ -176,7 +176,7 @@ About - {{$settings["general"]->site_title}}
             </div>
           </div>
         </div>
-      </section> 
+      </section>  
   
       <div class="section-signup bg1-pattern p-t-85 p-b-85">
         <form method="post" action="{{ url('/sendemail/send') }}" class="flex-c-m flex-w flex-col-c-m-lg p-l-5 p-r-5">
@@ -202,3 +202,13 @@ About - {{$settings["general"]->site_title}}
       </div>
     </div> 
 @endsection
+
+<script>
+  //CLOSE MESSAGE POPUP AFTER SIGNING UP TO EMAIL LIST
+  const alert = document.getElementById('message');
+    const closeBtn = document.getElementById('close');
+
+  closeBtn.addEventListener('click', () => {
+      alert.style.display = 'none';
+  });
+</script>

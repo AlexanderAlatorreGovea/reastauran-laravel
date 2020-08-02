@@ -4,6 +4,7 @@
         @include('includes.metatags')
     </head>
     <body>  
+    <div id='app'></div>
     <section id="app-layout"> 
         @include('includes.top-menu')
         @include('includes.side-menu')
@@ -36,10 +37,10 @@
             moveTotal = 20;
             // Right Button
             $('.right-btn').on('click', () => {
-            console.log(slides)
-            console.log(maxSlides)
-            console.log(currentSlide)
-            console.log(moveTotal)
+            // console.log(slides)
+            // console.log(maxSlides)
+            // // console.log(currentSlide)
+            // console.log(moveTotal)
             if(currentSlide < maxSlides){
                 currentSlide += 20;
                 $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
@@ -47,10 +48,10 @@
             });
             // Left Button
             $('.left-btn').on('click', () => {
-            console.log(slides)
-            console.log(maxSlides)
-            console.log(currentSlide)
-            console.log(moveTotal)
+            // console.log(slides)
+            // console.log(maxSlides)
+            // // console.log(currentSlide)
+            // console.log(moveTotal)
             if(currentSlide != 0){
                 currentSlide -= 20;
                 $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
@@ -67,7 +68,7 @@
             moveTotal = 100;
             // Right Button
             $('.right-btn').on('click', () => {
-            console.log('clicked right btn')
+            // console.log('clicked right btn')
             if(currentSlide < ((maxSlides * 100) - 100)){
                 currentSlide += 50;
                 $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
@@ -75,7 +76,7 @@
             });
             // Left Button
             $('.left-btn').on('click', () => {
-            console.log('clicked right btn')
+            // console.log('clicked right btn')
             if(currentSlide != 0){
                 currentSlide -= 50;
                 $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
@@ -84,7 +85,7 @@
         }
         }
         var b = window.matchMedia("(min-width: 768px) and (max-width: 997px");
-        console.log(b)
+        // // console.log(b)
         tabletSlider(b);
         b.addListener(tabletSlider);
 
@@ -136,12 +137,36 @@
             }
         }
 
-        //CLOSE MESSAGE POPUP AFTER SIGNING UP TO EMAIL LIST
-        const alert = document.getElementById('message');
-        const closeBtn = document.getElementById('close');
+        $(".update-cart").click(function (e) {
+           e.preventDefault();
 
-        closeBtn.addEventListener('click', () => {
-            alert.style.display = 'none';
+           var ele = $(this);
+
+            $.ajax({
+               url: '{{ url('update-cart') }}',
+               method: "patch",
+               data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id"), quantity: ele.parents("tr").find(".quantity").val()},
+               success: function (response) {
+                   window.location.reload();
+               }
+            });
+        });
+
+        $(".remove-from-cart").click(function (e) {
+            e.preventDefault();
+
+            var ele = $(this);
+
+            if(confirm("Are you sure")) {
+                $.ajax({
+                    url: '{{ url('remove-from-cart') }}',
+                    method: "DELETE",
+                    data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id")},
+                    success: function (response) {
+                        window.location.reload();
+                    }
+                });
+            }
         });
         
     </script>
@@ -167,5 +192,6 @@
                 //}
         })
     </script> --}}
+
   </body>
 </html>

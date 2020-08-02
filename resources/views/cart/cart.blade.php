@@ -47,7 +47,7 @@
                 @endif
             </tbody>
             <tfoot> 
-                <tr class="visible-xs">
+                <tr class="visible-xs" style="{{ $total === 0 ? 'display: none;' : '' }}">
                     <td class="text-center"><strong>Total {{ $total }}</strong></td>
                     <td>
                         <?php 
@@ -72,8 +72,18 @@
                         </form>
                     </td>
                 </tr>
+                <h2 style="{{ $total === 0 ? 'font-size: 2rem; text-align: center; color: black;' : 'display: none;' }}">
+                    There are no items in your cart :(
+                </h2>
             <tr>
-                <td><a href="{{ url('/') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+                <td>
+                    <a  style="{{ $total === 0 ? 'margin-top: 24rem;' : '' }}"
+                        href="{{ url('/menu') }}" 
+                        class="btn btn-warning">
+                        <i class="fa fa-angle-left"></i> 
+                        Continue Shopping
+                    </a>
+                </td>
                 <td colspan="2" class="hidden-xs"></td>
                 <td class="hidden-xs text-center">
                 </td>
@@ -84,7 +94,7 @@
 @endsection
 
 @section('scripts')
-<script>
+<script> 
         $(".update-cart").click(function (e) {
            e.preventDefault();
 
@@ -118,6 +128,6 @@
         });
 
     </script>
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/app.js') }}"></script>  
 
-@endsection
+@endsection  
