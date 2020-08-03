@@ -38,18 +38,18 @@ class FoodCategory extends Seeder
             'image_url' => '/img/Download-Salad-Transparent-PNG.png',
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()
-        ]);
+        ]); 
         DB::table('food_categories')->insert([
             'title' => 'deserts',
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi omnis iste ab deleniti cupiditate architecto officia aspernatur nulla iusto delectus doloremque possimus recusandae, reiciendis aliquam vel voluptas repellendus natus nihil?',
             'image_url' => '/img/Download-Cupcake-PNG-Transparent-Image-420x190.png',
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()
-        ]);
+        ]);  
         DB::table('food_categories')->insert([
             'title' => 'drinks',
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi omnis iste ab deleniti cupiditate architecto officia aspernatur nulla iusto delectus doloremque possimus recusandae, reiciendis aliquam vel voluptas repellendus natus nihil?',
-            'image_url' => '/img/Download-Cupcake-PNG-Transparent-Image-420x190.png',
+            'image_url' => '/img/shot.png',
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()
         ]);

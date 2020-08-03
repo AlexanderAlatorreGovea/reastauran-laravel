@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title')
+{{-- @section('title')
 Thank you - {{$settings["general"]->site_title}} 
-@endsection
+@endsection --}}
 
 @section('title')
 Thank You - {{$settings["general"]->site_title}} 

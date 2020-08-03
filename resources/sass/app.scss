@@ -77,6 +77,7 @@ body {
         }
         .menu {
             margin-bottom: 50px;
+            flex-direction: column;
             .menu-title {
                 text-transform: uppercase;
                 color: #0971ce;
@@ -128,7 +129,7 @@ body {
         .location {
             align-self: center;
             position: absolute;
-            bottom: 100px;
+            //bottom: 100px;
             .address {
                 color: #7a8d99;
                 margin-bottom: 20px;
@@ -712,7 +713,18 @@ button, input, optgroup, select, textarea {
 }
 
 // Large devices (desktops, 992px and up)
+@media (min-width: 0px) and (max-width: 768px) {
+    .order-now {
+        width: auto !important;
+        margin-top: 4rem;
+    }
+    .shopping-cart-section {
+        margin-bottom: 5rem;
+    }
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
+
 }
 
 // Extra large devices (large desktops, 1200px and up)

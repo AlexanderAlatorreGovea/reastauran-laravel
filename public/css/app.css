@@ -12047,10 +12047,6 @@ input[type=date i] {
 -----------------------------------------------------------
 */
 
-.logo {
-  height: 50px;
-}
-
 .logo > a {
   display: block;
   height: 100%;
@@ -12212,10 +12208,6 @@ input[type=date i] {
 
   .social {
     padding-right: 0px;
-  }
-
-  .logo {
-    height: 45px;
   }
 }
 
@@ -13190,6 +13182,7 @@ body {
 
 #app-layout .side-menu .menu {
   margin-bottom: 50px;
+  flex-direction: column;
 }
 
 #app-layout .side-menu .menu .menu-title {
@@ -13242,7 +13235,6 @@ body {
 #app-layout .side-menu .location {
   align-self: center;
   position: absolute;
-  bottom: 100px;
 }
 
 #app-layout .side-menu .location .address {
@@ -13835,5 +13827,16 @@ textarea {
   transform: translate3d(0px, 0px, 0px) !important;
   transform: none;
   left: -175% !important;
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+  .order-now {
+    width: auto !important;
+    margin-top: 4rem;
+  }
+
+  .shopping-cart-section {
+    margin-bottom: 5rem;
+  }
 }
 

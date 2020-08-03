@@ -17,9 +17,11 @@
                 <div class="wrap_menu p-l-45 p-l-0-xl">
                     <nav class="menu-top">
                         <ul class="main_menu">
-
                             <li>
                                 <a href="/menu">Food</a>
+                            </li>
+                            <li>
+                                <a href="/all-menu-items">Order Now</a>
                             </li>
                             <li>
                                 <a href="/about">About Us</a>

@@ -19,6 +19,8 @@ Route::get('/', 'StaticPagesController@home');
 Route::get('/menu', 'StaticPagesController@menu');
 Route::get('/menu/{slug}', 'StaticPagesController@singleMenu');
 Route::get('/about', 'StaticPagesController@about');
+Route::post('/about', 'StaticPagesController@specialOffersEmail');
+Route::get('/pages/sign-up-thanks', 'StaticPagesController@signUpThanks');
 Route::get('/reservations', 'StaticPagesController@reservations');
 Route::post('/reservations', 'StaticPagesController@saveReservation');
 Route::get('/reservations/thank-you', 'StaticPagesController@thankyou');
@@ -74,7 +76,7 @@ Route::put('/admin/settings/seo', 'admin\SettingController@saveSeo')->middleware
 Route::get('/admin/settings/social', 'admin\SettingController@social')->middleware('role:Admin');
 Route::put('/admin/settings/social', 'admin\SettingController@saveSocial')->middleware('role:Admin');
 
-// Admin Users 
+// Admin Users  
 Route::get('/admin/users', 'admin\UsersController@index')->middleware('role:Admin');
 Route::get('/admin/users/create', 'admin\UsersController@create')->middleware('role:Admin');
 Route::post('/admin/users', 'admin\UsersController@store')->middleware('role:Admin');
@@ -112,7 +114,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'pages/thank-you', 'menu.menu', 'menu.all-categories', 'menu.all-menu-items', 'menu.single-menu', 'cart/cart', 'cart/checkout', 'blog/all-blogs', 'blog/single-blog'], function ($view) {
+View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'pages/thank-you', 'pages/sign-up-thanks', 'menu.menu', 'menu.all-categories', 'menu.all-menu-items', 'menu.single-menu', 'cart/cart', 'cart/checkout', 'blog/all-blogs', 'blog/single-blog'], function ($view) {
     $generalSettings = GeneralSetting::find(1);
     $socialSettings = SocialSetting::find(1);
     $seoSettings = SeoSetting::find(1);

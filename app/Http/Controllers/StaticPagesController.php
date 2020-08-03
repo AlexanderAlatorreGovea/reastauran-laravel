@@ -11,6 +11,7 @@ use App\Reservation;
 use App\FoodCategory;
 use App\FoodItem;
 use App\GeneralSetting;
+use App\SpecialOffer;
 
 class StaticPagesController extends Controller { 
     public function home(){
@@ -103,7 +104,7 @@ class StaticPagesController extends Controller {
         return view('menu/single-menu', [
             "foodItem" => ucfirst($slug),
             "foodItems" => $foodItems
-        ]);
+        ]); 
     }
      
     public function allMenuItems() {
@@ -112,5 +113,21 @@ class StaticPagesController extends Controller {
         return view('menu/all-menu-items', [
             "foodItems" => $foodItems
         ]); 
+    }
+
+    public function signUpThanks() {
+        return view('pages/sign-up-thanks');
+    }
+ 
+    public function specialOffersEmail() {
+        request()->validate([
+            'email' => ['required', 'string'],
+        ]);
+        $member = new SpecialOffer();
+        $member->email = request('email');
+
+        $member->save();
+
+        return redirect('/pages/sign-up-thanks');
     }
 } 

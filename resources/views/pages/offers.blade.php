@@ -96,5 +96,5 @@ Offers - {{$settings["general"]->site_title}}
         </section>
       </div>
     </div>
-    {{-- @include('includes.footer') --}}
+    
 @endsection

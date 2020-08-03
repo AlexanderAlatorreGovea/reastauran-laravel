@@ -179,9 +179,9 @@ About - {{$settings["general"]->site_title}}
       </section>  
   
       <div class="section-signup bg1-pattern p-t-85 p-b-85">
-        <form method="post" action="{{ url('/sendemail/send') }}" class="flex-c-m flex-w flex-col-c-m-lg p-l-5 p-r-5">
+        <form method="post" action="{{ url('/about') }}" class="flex-c-m flex-w flex-col-c-m-lg p-l-5 p-r-5">
           {{ csrf_field() }}
-          <span class="txt5 m-10">
+          <span class="txt5 m-10"> 
             Specials Sign up
           </span>
           <div id="margin-normalize" class="wrap-input-signup size17 bo2 bo-rad-10 bgwhite pos-relative txt10 m-10">
@@ -199,7 +199,7 @@ About - {{$settings["general"]->site_title}}
             Sign-up
           </button>
         </form>
-      </div>
+      </div> 
     </div> 
 @endsection
 

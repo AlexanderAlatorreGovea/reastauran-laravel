@@ -2,7 +2,7 @@
   <a href="/" class="logo">
     <img src="{{$settings["general"]->logo_image_url}}">
   </a>
-  <div class="menu">
+  <div class="menu" style="height: initial;">
     <div class="menu-title">
       <a href="/" style="text-decoration: none;">
         Home
@@ -11,6 +11,9 @@
     <ul class="links">
       <li>
         <a href="/menu">Food</a>
+      </li>
+      <li>
+        <a href="/all-menu-items">Order Now</a>
       </li>
       <li>
         <a href="/about">About Us</a>
@@ -27,7 +30,7 @@
       </li>
       <li>
         <a href="/cart">Cart</a>
-    </li>
+      </li>
     </ul>
   </div>
   <div class="social-icons">
