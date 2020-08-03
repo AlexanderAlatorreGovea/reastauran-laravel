@@ -13,7 +13,7 @@ Food Items - {{$settings["general"]->site_title}}
                 @foreach($foodItems as $foodItem)
                     <div class="col-xs-18 col-sm-6 col-md-3">
                         <div class="thumbnail">
-                            <img style="object-fit: contain;" src="{{ $foodItem->image_url }}" width="500" height="300">
+                            <img style="object-fit: contain; width: 100%;" src="{{ $foodItem->image_url }}" width="500" height="300">
                             <div class="caption">
                                 <h4>{{ $foodItem->title }}</h4>
                                 <p>{{ str_limit(strtolower($foodItem->description), 50) }}</p>
