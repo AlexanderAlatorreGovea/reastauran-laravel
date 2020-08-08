@@ -26,7 +26,9 @@
                             <li>
                                 <a href="/about">About Us</a>
                             </li>
-                              
+                            <li>
+                                <a href="/blog">Blog</a>
+                            </li> 
                             <li>
                                 <a href="/reservations">Reservations</a>
                             </li>

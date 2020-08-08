@@ -712,6 +712,147 @@ button, input, optgroup, select, textarea {
     left: -175% !important;
 }
 
+.commentBox{
+    margin-top: 40px;
+    max-width: 700px;
+    padding: 0px 0px 20px 0px;
+    border-radius: 20px;
+    background: #1b212d;
+  }
+  .post{
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .postBody{
+    display: flex;
+  }
+  .postHeader{
+    display: flex;
+    align-items: center;
+  }
+  .publishDate{
+    color: #787878;
+    margin-left: 15px;
+  }
+  .postDesc{
+    margin-top: 15px;
+  }
+//   i{
+//     color: #fc6f20;
+//     padding-right: 5px;
+//   }
+  
+  .fa-heart:hover::after{
+    position: absolute;
+      margin-top: -4px;
+      margin-left: -20px;
+      content: "❤";
+      font-size: 24px;
+      opacity: 1;
+      animation: hearts .7s ease;
+    
+  } 
+  @keyframes hearts {
+      0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .postText{
+    font-weight: 500;
+  }
+  .desc{
+    margin-right: 20px;
+  }
+  .comment{
+    padding: 10px;
+    margin: 20px 30px;
+    color: #bebebe;
+  }
+  .commentContent {
+    color: black;
+  }
+  .commentAuthor {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: black;
+  }
+  input{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 18px;
+    border-radius: 15px;
+    border: 1px solid #787878;
+    padding: 5px 5px 5px 10px;
+    transition: 0.2s;
+  }
+  input:focus{
+    outline: none;
+    border: 1px solid #fc6f20;
+  }
+  input::placeholder{
+    color: #bebebe;
+  }
+  textarea{
+    font-family: 'Darker Grotesque', sans-serif;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: 1px solid #787878;
+    padding: 5px 5px 5px 10px;
+    height: 70px;
+    transition: 0.2s;
+    box-sizing: border-box;
+    resize: none;
+  }
+  textarea:focus{
+    outline: none;
+    border: 1px solid #fc6f20;
+  }
+  textarea::placeholder{
+    color: #bebebe;
+  }
+
+
+  .comment-pic {
+    max-width: 90px;
+    width: 100%;
+    height: 100%;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
+  .comment{
+    display: flex;
+  }
+  .commentPic{
+    max-width: 45px;
+    max-height: 45px;
+  }
+  .commentHeader{
+    display: flex;
+    align-items: center;
+  }
+  .commentBody{
+    max-width: 580px;
+    overflow-wrap: break-word;
+  }
+  .fa-instagram{
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    font-size: 38px;
+  }
+  .fa-instagram:hover{
+    font-size: 42px;
+    color: #fff;
+    transition: all .1s linear;
+    cursor: pointer;
+  }
+  
+
 // Large devices (desktops, 992px and up)
 @media (min-width: 0px) and (max-width: 768px) {
     .order-now {

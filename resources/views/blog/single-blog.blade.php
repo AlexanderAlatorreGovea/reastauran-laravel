@@ -13,7 +13,7 @@
 
                 <span class="txt29 m-l-10 m-r-10">/</span>
 
-                <a href="blog.html" class="txt27">
+                <a href="/blog" class="txt27">
                     Blog
                 </a>
 
@@ -81,30 +81,89 @@
                                     </p>
                                 </div>
                             </div>
-                     
+                       
+                            <!-- Comments -->
+                            <h4>Display Comments</h4>
+
+                            @foreach($article->comments as $comment)
+                            <div class="comment">
+                                <img class="comment-pic" src="https://upload.wikimedia.org/wikipedia/ru/thumb/b/bc/Garfield_the_Cat.svg/1200px-Garfield_the_Cat.svg.png" class="commentPic" alt="user Pic">
+                                <div class="commentBody">
+                                <div class="commentHeader">
+                                    <h3 class="commentAuthor">{{ $comment->name }}</h3>
+                                <span class="publishDate">{{ $comment->created_at->diffForHumans() }}</span>
+                                </div>
+                                    <span class="commentContent">{{ $comment->comment }}</span>
+                                </div>
+                            </div>
+
+                                {{-- <div class="display-comment">
+                                    <strong>{{ $comment->name }}</strong>
+                                    <p>{{ $comment->email }}</p>
+                                    <p>{{ $comment->website }}</p>
+                                    <p>{{ $comment->comment }}</p>
+
+                                    <a href="" id="reply"></a>                                   
+                                </div> --}}
+                            @endforeach  
+ 
+                                <hr />
+                            <h4>Add comment</h4>
+                            <!-- Comments -->
                         <!-- Leave a comment -->
-                        <form class="leave-comment p-t-10">
+                        <form method="post" action="/blog/{{ $article->title }}" class="leave-comment p-t-10">
+                            @csrf
                             <h4 class="txt33 p-b-14">
                                 Leave a Comment
-                            </h4>
+                            </h4> 
 
-                            <p>
+                            <p> 
                                 Your email address will not be published. Required fields are marked *
                             </p>
 
-                            <textarea class="bo-rad-10 size29 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-40" name="commentent" placeholder="Comment..."></textarea>
+                            <textarea class="bo-rad-10 size29 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-40 @error('comment') is-invalid @enderror" name="comment" value="{{ old('comment') }}" placeholder="Comment..."></textarea>
 
                             <div class="size30 bo2 bo-rad-10 m-t-3 m-b-20">
-                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" placeholder="Name *">
+                                <input id="name" type="text" class="bo-rad-10 sizefull txt10 p-l-20 @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Name">
+
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <div class="size30 bo2 bo-rad-10 m-t-3 m-b-20">
-                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email" placeholder="Email *">
+                                <input id="email" type="text" class="bo-rad-10 sizefull txt10 p-l-20 form-control form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="email">
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
                             </div>
 
                             <div class="size30 bo2 bo-rad-10 m-t-3 m-b-30">
-                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="website" placeholder="Website">
+                                <input id="website" type="text" class="bo-rad-10 sizefull txt10 p-l-20 form-control form-control-lg @error('website') is-invalid @enderror" name="website" value="{{ old('website') }}" required autocomplete="website" autofocus placeholder="website">
+
+                                @error('website')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
                             </div>
+
+                            <input id="id" type="hidden" class="bo-rad-10 sizefull txt10 p-l-20 form-control form-control-lg @error('id') is-invalid @enderror" name="id" value="{{ $article->id }}" required autocomplete="id" autofocus placeholder="id">
+
+                            @error('id')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+
+                            <input type="hidden" name="id"  />
 
                             <!-- Button3 -->
                             <button type="submit" class="btn3 flex-c-m size31 txt11 trans-0-4">

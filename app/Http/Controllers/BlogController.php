@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Blog;
+use App\Comment;
 
 class BlogController extends Controller
 {
@@ -13,41 +14,94 @@ class BlogController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function allBlogs()
-    {
+    public function allBlogs()  
+    { 
         $blogs = Blog::paginate(4);
         //$blog = Blog::all();
  
         // $blog->map(function ($b) {
         //     return $this->title.push($b->title);
         // });
-
+ 
         // dd($this->title);
-        
+        //9
+        //$comment =  Blog::all();
+        //dd($comment);
+        //$article = Blog::find(1);
+        //dd($article->comments()->comment_id);
+        // foreach ($article->comments() as $role) {
+        //     dd($role);
+        // }
+
+        //dd($article->comments());
+
         return view('blog.all-blogs', [ 
             "blogs" => $blogs
         ]); 
     } 
-
+ 
     public function blog($slug)
     {     
         $title = str_replace('-', ' ', strtoupper($slug));
         $article = Blog::where('title', $title)->first();
+        $comments = Comment::all(); 
+        $article = Blog::where('title', $title)->first();
+        //$comments = Comment::all();
+        //dd($comments);
+        //dd($comments);
+        //dd($article->comments($comments));
         //return dd($article->id);
+        //$comment = Comment::find(1);
+        //dd($comment->post->name);
+
+        //$post = Blog::find(1);
+        //dd($post);
+        //$comment = $post->comments->first();
         return view('blog.single-blog', [
-             'article' => $article 
-         ]);
-    } 
+            'article' => $article,
+            'comments' => $comments
+        ]);
+    }   
+
+    public function storet(Request $request, $slug)
+    { 
+        request()->validate([
+            'name' => ['required', 'string'], 
+            'email' => ['required', 'string'],
+            'comment' => ['required', 'string'],
+            'website' => ['string'],
+        ]); 
+
+        $comment = new Comment();
+        $comment->name = request('name');
+        $comment->email = request('email');
+        $comment->comment = request('comment');
+        $comment->website = request('website');
+        
+        $title = str_replace('-', ' ', strtoupper($slug));
+        $article = Blog::where('title', $title)->first();
+
+        $article->comments()->save($comment);
+
+        //$comment = Comment::find(1);
+        //dd($comment->post());
+        //dd($article);
+        //dd($request);
+        //$post->comments()->save($comment);
+        //dd($post);
+        //dd($comment);
+        return back();
+    }
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+    // public function create()
+    // { 
+    //     return view('post');
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -55,10 +109,10 @@ class BlogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    // public function store(Request $request)
+    // {
+    //     //
+    // }
 
     /**
      * Display the specified resource.

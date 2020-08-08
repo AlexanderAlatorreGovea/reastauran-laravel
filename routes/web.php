@@ -101,13 +101,15 @@ Route::get('/all-menu-items', 'StaticPagesController@allMenuItems');
 // COLLECT SIGNUP EMAILS 
 Route::post('/sendemail/send', 'SendEmailController@sendEmail');
 
-// BLOG
+// BLOG 
 Route::get('/blog', 'BlogController@allBlogs');
 Route::get('/blog/{slug}', 'BlogController@blog');
- 
+Route::post('/blog/{slug}', 'BlogController@storet');
+// Route::get('/blog/{slug}', 'BlogController@store');
+
 //MESSAGE CONTROLLER
 Route::post('/contact', 'admin\MessageController@store');
-
+ 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
