@@ -104,23 +104,25 @@
         }
         });
 
-        /* STICKY HEADER ANIMATION */
+        /* STICKY HEADER ANIMATION */ 
         window.onscroll = function() {
         addOpacity();
         };
 
         let header = document.querySelector(".wrap-menu-header");
         let logo = document.getElementById("logo-top");
+        let dropDown = document.getElementById('#dropdown-menu');
         let sticky = header.offsetTop;
-    
         function addOpacity() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("opacity");
-            logo.classList.add("shrink-logo");
-        } else {
-            header.classList.remove("opacity");
-            logo.classList.remove("shrink-logo");
-        }
+            if (window.pageYOffset > sticky) {
+                header.classList.add("opacity");
+                logo.classList.add("shrink-logo");
+                dropDown.classList.remove("opacity");
+            } else {
+                header.classList.remove("opacity");
+                logo.classList.remove("shrink-logo");
+                dropDown.classList.remove("opacity");
+            }
         }
 
         document.addEventListener('DOMContentLoaded', () => {

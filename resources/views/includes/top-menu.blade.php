@@ -39,7 +39,7 @@
                                 <a href="/contact">Contact</a>
                             </li> 
                             <li>
-                                <div class="dropdown">
+                                <div class="dropdown" id="dropdown-menu">
                                     <button type="button" class="btn btn-info" data-toggle="dropdown">
                                         <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart <span class="badge badge-pill badge-danger">{{ count((array) session('cart')) }}</span>
                                     </button>
@@ -96,16 +96,17 @@
     let dropdownMenu = document.querySelector('.dropdown-menu');
     let cartPage = document.URL.includes('cart');
     let menuOpen = false;   
+    
     //console.log(document.URL.includes('cart'))    
         dropdown.addEventListener('click', () => {
             if (!document.URL.includes('cart')) {
                 if(!menuOpen) {
                     dropdownMenu.classList.add('show');
-                
+                    dropDown.classList.remove("opacity");
                     menuOpen = true;
                 } else {
                     dropdownMenu.classList.remove('show');
-                
+                    dropDown.classList.remove("opacity");
                     menuOpen = false;
                 }
              } else {
