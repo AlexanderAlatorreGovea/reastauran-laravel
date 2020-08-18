@@ -13,7 +13,7 @@
     
                 <span class="txt29 m-l-10 m-r-10">/</span>
 
-                <span class="txt29">
+                <span class="txt29"> 
                     Blog
                 </span>
             </div>
@@ -34,7 +34,7 @@
                             <div class="blo4 p-b-63">
                                 <div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
                                     <a href='blog/{{ strtolower($newURL)  }}'>
-                                         <img src="{{$blog->image_url}}" alt="IMG-BLOG">
+                                         <img id="lazy" src="{{$blog->image_url}}" alt="IMG-BLOG">
                                     </a>
 
                                     <div class="date-blo4 flex-col-c-m">
@@ -106,144 +106,23 @@
                             </button>
                         </div>
 
-                        <!-- Categories -->
+                        <!-- Categories --> 
                         <div class="categories">
                             <h4 class="txt33 bo5-b p-b-35 p-t-58">
                                 Categories
                             </h4>
  
                             <ul>
-                                <li class="bo5-b p-t-8 p-b-8">
-                                    <a href="#" class="txt27">
-                                        Cooking recipe
-                                    </a>
-                                </li>
-
-                                <li class="bo5-b p-t-8 p-b-8">
-                                    <a href="#" class="txt27">
-                                        Delicious foods
-                                    </a>
-                                </li>
-
-                                <li class="bo5-b p-t-8 p-b-8">
-                                    <a href="#" class="txt27">
-                                        Events Design
-                                    </a>
-                                </li>
-
-                                <li class="bo5-b p-t-8 p-b-8">
-                                    <a href="#" class="txt27">
-                                        Restaurant Place
-                                    </a>
-                                </li>
-
-                                <li class="bo5-b p-t-8 p-b-8">
-                                    <a href="#" class="txt27">
-                                        WordPress
-                                    </a>
-                                </li>
+                                @foreach ($categories as $item)
+                                    <li class="bo5-b p-t-8 p-b-8">
+                                        <a href="{{ $item->id }}" class="txt27">
+                                            {{ $item->name }}
+                                        </a>
+                                    </li>
+                                @endforeach
+                               
                             </ul>
                         </div>
-
-                        <!-- Most Popular -->
-                        {{-- <div class="popular">
-                            <h4 class="txt33 p-b-35 p-t-58">
-                                Most popular
-                            </h4>
-
-                            <ul>
-                                <li class="flex-w m-b-25">
-                                    <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-                                        <a href="#">
-                                            <img src="images/blog-11.jpg" alt="IMG-BLOG">
-                                        </a>
-                                    </div>
-
-                                    <div class="size28">
-                                        <a href="#" class="dis-block txt28 m-b-8">
-                                            Best Places for Wine
-                                        </a>
-
-                                        <span class="txt14">
-                                            3 days ago
-                                        </span>
-                                    </div>
-                                </li>
-
-                                <li class="flex-w m-b-25">
-                                    <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-                                        <a href="#">
-                                            <img src="images/blog-12.jpg" alt="IMG-BLOG">
-                                        </a>
-                                    </div>
-
-                                    <div class="size28">
-                                        <a href="#" class="dis-block txt28 m-b-8">
-                                            Eggs and Cheese
-                                        </a>
-
-                                        <span class="txt14">
-                                            July 2, 2017
-                                        </span>
-                                    </div>
-                                </li>
-
-                                <li class="flex-w m-b-25">
-                                    <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-                                        <a href="#">
-                                            <img src="images/blog-13.jpg" alt="IMG-BLOG">
-                                        </a>
-                                    </div>
-
-                                    <div class="size28">
-                                        <a href="#" class="dis-block txt28 m-b-8">
-                                            Style the Wedding Party
-                                        </a>
-
-                                        <span class="txt14">
-                                            May 28, 2017
-                                        </span>
-                                    </div>
-                                </li>
-
-                                <li class="flex-w m-b-25">
-                                    <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-                                        <a href="#">
-                                            <img src="images/blog-14.jpg" alt="IMG-BLOG">
-                                        </a>
-                                    </div>
-
-                                    <div class="size28">
-                                        <a href="#" class="dis-block txt28 m-b-8">
-                                            Cooking recipe Delicious
-                                        </a>
-
-                                        <span class="txt14">
-                                            May 25, 2017
-                                        </span>
-                                    </div>
-                                </li>
-
-                                <li class="flex-w m-b-25">
-                                    <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-                                        <a href="#">
-                                            <img src="images/blog-15.jpg" alt="IMG-BLOG">
-                                        </a>
-                                    </div>
-
-                                    <div class="size28">
-                                        <a href="#" class="dis-block txt28 m-b-8">
-                                            Pizza is prepared fresh
-                                        </a>
-
-                                        <span class="txt14">
-                                            May 2, 2017
-                                        </span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div> --}}
-
 
                         <!-- Archive -->
                         <div class="archive">

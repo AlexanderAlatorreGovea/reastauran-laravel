@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Blog;
 use App\Comment;
+use App\Category;
 
 class BlogController extends Controller
 {
@@ -17,6 +18,7 @@ class BlogController extends Controller
     public function allBlogs()  
     { 
         $blogs = Blog::paginate(4);
+        $categories = Category::all(); 
         //$blog = Blog::all();
  
         // $blog->map(function ($b) {
@@ -32,20 +34,20 @@ class BlogController extends Controller
         // foreach ($article->comments() as $role) {
         //     dd($role);
         // }
-
+ 
         //dd($article->comments());
-
+       
         return view('blog.all-blogs', [ 
-            "blogs" => $blogs
+            "blogs" => $blogs,
+            "categories" => $categories
         ]); 
-    } 
+    }  
  
     public function blog($slug)
     {     
         $title = str_replace('-', ' ', strtoupper($slug));
         $article = Blog::where('title', $title)->first();
         $comments = Comment::all(); 
-        $article = Blog::where('title', $title)->first();
         //$comments = Comment::all();
         //dd($comments);
         //dd($comments);
@@ -55,13 +57,18 @@ class BlogController extends Controller
         //dd($comment->post->name);
 
         //$post = Blog::find(1);
-        //dd($post);
+       
         //$comment = $post->comments->first();
         return view('blog.single-blog', [
             'article' => $article,
             'comments' => $comments
         ]);
     }   
+
+    public function category()
+    {
+
+    }
 
     public function storet(Request $request, $slug)
     { 

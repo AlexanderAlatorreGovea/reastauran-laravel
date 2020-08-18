@@ -58,7 +58,7 @@ About - {{$settings["general"]->site_title}}
     
             <div class="col-md-6 p-b-30">
               <div class="wrap-pic-delicious size2 bo-rad-10 hov-img-zoom m-l-r-auto">
-                <img src="assets/images/our-story-01.jpg" alt="IMG-OUR">
+                <img id="lazy" src="assets/images/our-story-01.jpg" alt="IMG-OUR">
               </div>
             </div>
           </div>
@@ -68,7 +68,7 @@ About - {{$settings["general"]->site_title}}
           <div class="row p-t-170" id="normalize-top_margin">
             <div class="col-md-6 p-b-30">
               <div class="wrap-pic-romantic size2 bo-rad-10 hov-img-zoom m-l-r-auto">
-                <img src="assets/images/our-story-02.jpg" alt="IMG-OUR">
+                <img id="lazy" src="assets/images/our-story-02.jpg" alt="IMG-OUR">
               </div>
             </div>
     
@@ -110,7 +110,7 @@ About - {{$settings["general"]->site_title}}
               <!-- -Block5 -->
               <div class="blo5 pos-relative p-t-60">
                 <div class="pic-blo5 size14 bo4 wrap-cir-pic hov-img-zoom ab-c-t">
-                  <a href="#"><img src="assets/images/avatar-02.jpg" alt="IGM-AVATAR"></a>
+                  <a href="#"><img id="lazy" src="assets/images/avatar-02.jpg" alt="IGM-AVATAR"></a>
                 </div>
     
                 <div class="text-blo5 size34 t-center bo-rad-10 bo7 p-t-90 p-l-35 p-r-35 p-b-30">
@@ -133,7 +133,7 @@ About - {{$settings["general"]->site_title}}
               <!-- -Block5 -->
               <div class="blo5 pos-relative p-t-60">
                 <div class="pic-blo5 size14 bo4 wrap-cir-pic hov-img-zoom ab-c-t">
-                  <a href="#"><img src="assets/images/avatar-03.jpg" alt="IGM-AVATAR"></a>
+                  <a href="#"><img id="lazy" src="assets/images/avatar-03.jpg" alt="IGM-AVATAR"></a>
                 </div>
     
                 <div class="text-blo5 size34 t-center bo-rad-10 bo7 p-t-90 p-l-35 p-r-35 p-b-30">
@@ -156,7 +156,7 @@ About - {{$settings["general"]->site_title}}
               <!-- -Block5 -->
               <div class="blo5 pos-relative p-t-60">
                 <div class="pic-blo5 size14 bo4 wrap-cir-pic hov-img-zoom ab-c-t">
-                  <a href="#"><img src="assets/images/avatar-05.jpg" alt="IGM-AVATAR"></a>
+                  <a href="#"><img id="lazy" src="assets/images/avatar-05.jpg" alt="IGM-AVATAR"></a>
                 </div>
     
                 <div class="text-blo5 size34 t-center bo-rad-10 bo7 p-t-90 p-l-35 p-r-35 p-b-30">

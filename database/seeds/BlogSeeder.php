@@ -20,6 +20,7 @@ class BlogSeeder extends Seeder
             'keywords' => 'Cooking, Food',
             'image_url' => '/img/blog-06.jpg',
             'amount_of_comments' => 2,
+            'category_id' => 1,
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()
         ]);
@@ -31,6 +32,7 @@ class BlogSeeder extends Seeder
             'keywords' => 'Cooking, Food',
             'image_url' => '/img/blog-04.jpg',
             'amount_of_comments' => 2,
+            'category_id' => 2,
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()
         ]);
@@ -42,6 +44,7 @@ class BlogSeeder extends Seeder
             'keywords' => 'Cooking, Food',
             'image_url' => '/img/blog-07.jpg',
             'amount_of_comments' => 2,
+            'category_id' => 1,
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()
         ]);
@@ -51,6 +54,7 @@ class BlogSeeder extends Seeder
             'preview_content' => 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius',
             'full_content' => 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius',
             'keywords' => 'Cooking, Food',
+            'category_id' => 3,
             'image_url' => '/img/blog-10.jpg',
             'amount_of_comments' => 2,
             'updated_at' => Carbon::now(), 
@@ -62,6 +66,7 @@ class BlogSeeder extends Seeder
             'preview_content' => 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius',
             'full_content' => 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius',
             'keywords' => 'Cooking, Food',
+            'category_id' => 4,
             'image_url' => '/img/blog-06.jpg',
             'amount_of_comments' => 2,
             'updated_at' => Carbon::now(), 
@@ -73,6 +78,7 @@ class BlogSeeder extends Seeder
             'preview_content' => 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius',
             'full_content' => 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius',
             'keywords' => 'Cooking, Food',
+            'category_id' => 5,
             'image_url' => '/img/blog-04.jpg',
             'amount_of_comments' => 2,
             'updated_at' => Carbon::now(), 
@@ -84,6 +90,7 @@ class BlogSeeder extends Seeder
             'preview_content' => 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius',
             'full_content' => 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius',
             'keywords' => 'Cooking, Food',
+            'category_id' => 1,
             'image_url' => '/img/blog-07.jpg',
             'amount_of_comments' => 2,
             'updated_at' => Carbon::now(), 
@@ -95,6 +102,7 @@ class BlogSeeder extends Seeder
             'preview_content' => 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius',
             'full_content' => 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius',
             'keywords' => 'Cooking, Food',
+            'category_id' => 5,
             'image_url' => '/img/blog-10.jpg',
             'amount_of_comments' => 2,
             'updated_at' => Carbon::now(), 

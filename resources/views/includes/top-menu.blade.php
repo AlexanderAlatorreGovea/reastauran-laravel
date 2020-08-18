@@ -9,7 +9,7 @@
                 <!-- Logo -->
                 <div class="logo-top">
                     <a href="/">
-                        <img id="logo-top" src="/img/clipart-restaurant-restaurant-logo-5.png" alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
+                        <img id="lazy" id="logo-top" src="/img/clipart-restaurant-restaurant-logo-5.png" alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
                     </a>
                 </div>
  

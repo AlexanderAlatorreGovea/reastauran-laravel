@@ -9,7 +9,7 @@
       <div class="right-btn">
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </div>
-      <div class="food-slider">
+      <div class="food-slider"> 
         <div class="sliding-system">
         @foreach ($categories as $category)
             <a href="/menu/{{$category->title}}" class="slide">
@@ -22,7 +22,7 @@
                   {{$category->description}}
                 </p>
                 <div class="food-image">
-                  <img src="{{$category->image_url}}">
+                  <img id="lazy" src="{{$category->image_url}}">
                 </div>
               </div>
           </a>

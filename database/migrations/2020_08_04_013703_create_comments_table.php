@@ -25,7 +25,7 @@ class CreateCommentsTable extends Migration
             $table->text('website');
             $table->timestamps();
         });
-    }
+    } 
 
     /** 
      * Reverse the migrations.

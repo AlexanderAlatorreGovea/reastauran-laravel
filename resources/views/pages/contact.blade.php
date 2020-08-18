@@ -108,7 +108,7 @@ About - {{$settings["general"]->site_title}}
 				<div class="col-sm-8 col-md-4 col-lg-4 m-l-r-auto p-t-30">
 					<div class="dis-flex m-l-23">
 						<div class="p-r-40 p-t-6">
-							<img src="assets/images/map-icon.png" alt="IMG-ICON">
+							<img id="lazy" src="assets/images/map-icon.png" alt="IMG-ICON">
 						</div>
 
 						<div class="flex-col-l">
@@ -129,7 +129,7 @@ About - {{$settings["general"]->site_title}}
 				<div class="col-sm-8 col-md-3 col-lg-4 m-l-r-auto p-t-30">
 					<div class="dis-flex m-l-23">
 						<div class="p-r-40 p-t-6">
-							<img src="assets/images/phone-icon.png" alt="IMG-ICON">
+							<img id="lazy" src="assets/images/phone-icon.png" alt="IMG-ICON">
 						</div>
 
 
@@ -148,7 +148,7 @@ About - {{$settings["general"]->site_title}}
 				<div class="col-sm-8 col-md-5 col-lg-4 m-l-r-auto p-t-30">
 					<div class="dis-flex m-l-23">
 						<div class="p-r-40 p-t-6">
-							<img src="assets/images/clock-icon.png" alt="IMG-ICON">
+							<img id="lazy" src="assets/images/clock-icon.png" alt="IMG-ICON">
 						</div>
 
 

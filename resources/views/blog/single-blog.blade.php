@@ -35,7 +35,7 @@
                                 <!-- - -->
                                 <div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
                                     <a href="blog-detail.html">
-                                        <img src="{{ $article->image_url }}"  alt="IMG-BLOG">
+                                        <img id="lazy" src="{{ $article->image_url }}"  alt="IMG-BLOG">
                                     </a>
 
                                     <div class="date-blo4 flex-col-c-m">
@@ -87,7 +87,7 @@
 
                             @foreach($article->comments as $comment)
                             <div class="comment">
-                                <img class="comment-pic" src="https://upload.wikimedia.org/wikipedia/ru/thumb/b/bc/Garfield_the_Cat.svg/1200px-Garfield_the_Cat.svg.png" class="commentPic" alt="user Pic">
+                                <img id="lazy" class="comment-pic" src="https://upload.wikimedia.org/wikipedia/ru/thumb/b/bc/Garfield_the_Cat.svg/1200px-Garfield_the_Cat.svg.png" class="commentPic" alt="user Pic">
                                 <div class="commentBody">
                                 <div class="commentHeader">
                                     <h3 class="commentAuthor">{{ $comment->name }}</h3>
@@ -230,7 +230,7 @@
                                 <li class="flex-w m-b-25">
                                     <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
                                         <a href="#">
-                                            <img src="images/blog-11.jpg" alt="IMG-BLOG">
+                                            <img id="lazy" src="images/blog-11.jpg" alt="IMG-BLOG">
                                         </a>
                                     </div>
 
@@ -248,7 +248,7 @@
                                 <li class="flex-w m-b-25">
                                     <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
                                         <a href="#">
-                                            <img src="images/blog-12.jpg" alt="IMG-BLOG">
+                                            <img id="lazy" src="images/blog-12.jpg" alt="IMG-BLOG">
                                         </a>
                                     </div>
 
@@ -266,7 +266,7 @@
                                 <li class="flex-w m-b-25">
                                     <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
                                         <a href="#">
-                                            <img src="images/blog-13.jpg" alt="IMG-BLOG">
+                                            <img id="lazy" src="images/blog-13.jpg" alt="IMG-BLOG">
                                         </a>
                                     </div>
 
@@ -284,7 +284,7 @@
                                 <li class="flex-w m-b-25">
                                     <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
                                         <a href="#">
-                                            <img src="images/blog-14.jpg" alt="IMG-BLOG">
+                                            <img id="lazy" src="images/blog-14.jpg" alt="IMG-BLOG">
                                         </a>
                                     </div>
 
@@ -302,7 +302,7 @@
                                 <li class="flex-w m-b-25">
                                     <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
                                         <a href="#">
-                                            <img src="images/blog-15.jpg" alt="IMG-BLOG">
+                                            <img id="lazy" src="images/blog-15.jpg" alt="IMG-BLOG">
                                         </a>
                                     </div>
 

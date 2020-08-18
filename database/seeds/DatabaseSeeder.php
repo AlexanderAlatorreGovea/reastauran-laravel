@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call(GeneralSettingSeeder::class);
         $this->call(SeoSettingSeeder::class);
         $this->call(SocialSettingSeeder::class);
+        $this->call(CategorySeeder::class);
         $this->call(BlogSeeder::class);
         $this->call(SpecialOfferSeeder::class);
     }

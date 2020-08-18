@@ -148,7 +148,7 @@
                url: '{{ url('update-cart') }}',
                method: "patch",
                data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id"), quantity: ele.parents("tr").find(".quantity").val()},
-               success: function (response) {
+               success: function (response) {   
                    window.location.reload();
                }
             });
@@ -172,28 +172,7 @@
         });
         
     </script>
-    {{-- <script>
-        const dropdown = document.querySelector('.dropdown');
-        let dropdownMenu = document.querySelector('.dropdown-menu');
-        let cartPage = document.URL.includes('cart');
-        let menuOpen = false;   
-        console.log(document.URL.includes('cart'))    
-        dropdown.addEventListener('click', () => {
-            //if (!document.URL.includes('cart')) {
-                if(!menuOpen) {
-                    dropdownMenu.classList.add('show');
-                
-                    menuOpen = true;
-                } else {
-                    dropdownMenu.classList.remove('show');
-                
-                    menuOpen = false;
-                }
-                //} else {
-                //  return
-                //}
-        })
-    </script> --}}
+    @stack('customjs')
 
   </body>
 </html>

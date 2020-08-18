@@ -30,7 +30,7 @@ Food Menu - {{$settings["general"]->site_title}}
                 repellendus natus nihil?
               </p>
               <div class="food-image">
-                <img src="/img/CHIPS.png">
+                <img id="lazy"  src="/img/CHIPS.png">
               </div>
             </div>
 
@@ -48,7 +48,7 @@ Food Menu - {{$settings["general"]->site_title}}
                 repellendus natus nihil?
               </p>
               <div class="food-image">
-                <img src="/img/hamburger-and-fries-png-4.png">
+                <img id="lazy"  src="/img/hamburger-and-fries-png-4.png">
               </div>
             </div>
 
@@ -66,7 +66,7 @@ Food Menu - {{$settings["general"]->site_title}}
                 repellendus natus nihil?
               </p>
               <div class="food-image">
-                <img src="/img/342-3422633_pork-entrees-steak-pork-png.png">
+                <img id="lazy"  src="/img/342-3422633_pork-entrees-steak-pork-png.png">
               </div>
             </div>
 
@@ -84,7 +84,7 @@ Food Menu - {{$settings["general"]->site_title}}
                 repellendus natus nihil?
               </p>
               <div class="food-image">
-                <img src="/img/Download-Salad-Transparent-PNG.png">
+                <img id="lazy"  src="/img/Download-Salad-Transparent-PNG.png">
               </div>
             </div>
 
@@ -103,6 +103,7 @@ Food Menu - {{$settings["general"]->site_title}}
               </p>
               <div class="food-image">
                 <img
+                id="lazy" 
                   src="/img/Download-Cupcake-PNG-Transparent-Image-420x190.png">
               </div>
             </div>
@@ -121,6 +122,7 @@ Food Menu - {{$settings["general"]->site_title}}
               </p>
               <div class="food-image">
                 <img
+                id="lazy" 
                   src="/img/Download-Cupcake-PNG-Transparent-Image-420x190.png">
               </div>
             </div>
@@ -139,6 +141,7 @@ Food Menu - {{$settings["general"]->site_title}}
               </p>
               <div class="food-image">
                 <img
+                id="lazy" 
                   src="/img/Download-Cupcake-PNG-Transparent-Image-420x190.png">
               </div>
             </div>

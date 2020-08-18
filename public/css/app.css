@@ -13936,6 +13936,11 @@ input {
   transition: 0.2s;
 }
 
+input:focus {
+  outline: none;
+  border: 1px solid #fc6f20;
+}
+
 input::-webkit-input-placeholder {
   color: #bebebe;
 }
@@ -13970,6 +13975,7 @@ textarea {
 
 textarea:focus {
   outline: none;
+  border: 1px solid #fc6f20;
 }
 
 textarea::-webkit-input-placeholder {

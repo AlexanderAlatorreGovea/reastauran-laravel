@@ -96,51 +96,51 @@
                 <!-- Gallery footer -->
                 <div class="wrap-gallery-footer flex-w">
                     <a id="image-gallery" class="item-gallery-footer wrap-pic-w" data-lightbox="gallery-footer">
-                        <img src="{{url('assets/images/photo-gallery-thumb-01.jpg')}}" data="assets/images/photo-gallery-thumb-01.jpg" alt="GALLERY">
+                        <img id="lazy" src="{{url('assets/images/photo-gallery-thumb-01.jpg')}}" data="assets/images/photo-gallery-thumb-01.jpg" alt="GALLERY">
                     </a>
 
                     <a id="image-gallery" class="item-gallery-footer wrap-pic-w" data-lightbox="gallery-footer">
-                        <img src="{{url('assets/images/photo-gallery-thumb-02.jpg')}}" data="assets/images/photo-gallery-thumb-02.jpg" alt="GALLERY">
+                        <img id="lazy" src="{{url('assets/images/photo-gallery-thumb-02.jpg')}}" data="assets/images/photo-gallery-thumb-02.jpg" alt="GALLERY">
                     </a>
 
                     <a id="image-gallery" class="item-gallery-footer wrap-pic-w" data-lightbox="gallery-footer">
-                        <img src="{{url('assets/images/photo-gallery-thumb-03.jpg')}}" data="assets/images/photo-gallery-thumb-03.jpg" alt="GALLERY">
+                        <img id="lazy" src="{{url('assets/images/photo-gallery-thumb-03.jpg')}}" data="assets/images/photo-gallery-thumb-03.jpg" alt="GALLERY">
                     </a>
 
                     <a id="image-gallery" class="item-gallery-footer wrap-pic-w" data-lightbox="gallery-footer">
-                        <img src="{{url('assets/images/photo-gallery-thumb-04.jpg')}}" data="assets/images/photo-gallery-thumb-04.jpg" alt="GALLERY">
+                        <img id="lazy" src="{{url('assets/images/photo-gallery-thumb-04.jpg')}}" data="assets/images/photo-gallery-thumb-04.jpg" alt="GALLERY">
                     </a>
 
                     <a id="image-gallery" class="item-gallery-footer wrap-pic-w" data-lightbox="gallery-footer">
-                        <img src="{{url('assets/images/photo-gallery-thumb-05.jpg')}}" data="assets/images/photo-gallery-thumb-05.jpg" alt="GALLERY">
+                        <img id="lazy" src="{{url('assets/images/photo-gallery-thumb-05.jpg')}}" data="assets/images/photo-gallery-thumb-05.jpg" alt="GALLERY">
                     </a>
 
                     <a id="image-gallery" class="item-gallery-footer wrap-pic-w" data-lightbox="gallery-footer">
-                        <img src="{{url('assets/images/photo-gallery-thumb-06.jpg')}}" data="assets/images/photo-gallery-thumb-06.jpg" alt="GALLERY">
+                        <img id="lazy" src="{{url('assets/images/photo-gallery-thumb-06.jpg')}}" data="assets/images/photo-gallery-thumb-06.jpg" alt="GALLERY">
                     </a>
 
                     <a id="image-gallery" class="item-gallery-footer wrap-pic-w" data-lightbox="gallery-footer">
-                        <img src="{{url('assets/images/photo-gallery-thumb-07.jpg')}}" data="assets/images/photo-gallery-thumb-07.jpg" alt="GALLERY">
+                        <img id="lazy" src="{{url('assets/images/photo-gallery-thumb-07.jpg')}}" data="assets/images/photo-gallery-thumb-07.jpg" alt="GALLERY">
                     </a>
 
                     <a id="image-gallery" class="item-gallery-footer wrap-pic-w" data-lightbox="gallery-footer">
-                        <img src="{{url('assets/images/photo-gallery-thumb-08.jpg')}}" data="assets/images/photo-gallery-thumb-08.jpg" alt="GALLERY">
+                        <img id="lazy" src="{{url('assets/images/photo-gallery-thumb-08.jpg')}}" data="assets/images/photo-gallery-thumb-08.jpg" alt="GALLERY">
                     </a>
 
                     <a id="image-gallery" class="item-gallery-footer wrap-pic-w" data-lightbox="gallery-footer">
-                        <img src="{{url('assets/images/photo-gallery-thumb-09.jpg')}}" data="assets/images/photo-gallery-thumb-09.jpg" alt="GALLERY">
+                        <img id="lazy" src="{{url('assets/images/photo-gallery-thumb-09.jpg')}}" data="assets/images/photo-gallery-thumb-09.jpg" alt="GALLERY">
                     </a>
 
                     <a id="image-gallery" class="item-gallery-footer wrap-pic-w" data-lightbox="gallery-footer">
-                        <img src="{{url('assets/images/photo-gallery-thumb-10.jpg')}}" data="assets/images/photo-gallery-thumb-10.jpg" alt="GALLERY">
+                        <img id="lazy" src="{{url('assets/images/photo-gallery-thumb-10.jpg')}}" data="assets/images/photo-gallery-thumb-10.jpg" alt="GALLERY">
                     </a>
 
                     <a id="image-gallery" class="item-gallery-footer wrap-pic-w" data-lightbox="gallery-footer">
-                        <img src="{{url('assets/images/photo-gallery-thumb-11.jpg')}}" data="assets/images/photo-gallery-thumb-11.jpg" alt="GALLERY">
+                        <img id="lazy" src="{{url('assets/images/photo-gallery-thumb-11.jpg')}}" data="assets/images/photo-gallery-thumb-11.jpg" alt="GALLERY">
                     </a>
 
                     <a id="image-gallery" class="item-gallery-footer wrap-pic-w" data-lightbox="gallery-footer">
-                        <img src="{{url('assets/images/photo-gallery-thumb-12.jpg')}}" data="assets/images/photo-gallery-thumb-12.jpg" alt="GALLERY">
+                        <img id="lazy" src="{{url('assets/images/photo-gallery-thumb-12.jpg')}}" data="assets/images/photo-gallery-thumb-12.jpg" alt="GALLERY">
                     </a>
                 </div>
 

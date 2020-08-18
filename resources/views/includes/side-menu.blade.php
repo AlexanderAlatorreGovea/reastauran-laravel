@@ -1,6 +1,6 @@
 <div class="side-menu">
   <a href="/" class="logo">
-    <img src="{{$settings["general"]->logo_image_url}}">
+    <img id="lazy" src="{{$settings["general"]->logo_image_url}}">
   </a>
   <div class="menu" style="height: initial;">
     <div class="menu-title">

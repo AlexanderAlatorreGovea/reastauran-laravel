@@ -19,15 +19,17 @@ class CreateBlogsTable extends Migration
             $table->string('author');
             $table->text('preview_content');
             $table->text('full_content');
-            $table->text('image_url'); 
+            $table->text('image_url');  
             $table->text('keywords');
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->mediumInteger('amount_of_comments');	
             $table->timestamps();
         });
-    }
+    } 
 
     /**
-     * Reverse the migrations.
+     * Reverse the migrations. 
      *
      * @return void
      */
