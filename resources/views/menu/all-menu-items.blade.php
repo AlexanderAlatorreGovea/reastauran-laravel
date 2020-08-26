@@ -7,14 +7,12 @@ Food Items - {{$settings["general"]->site_title}}
  
 @section('title', 'Products')
    
-
 @section('content')
 <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <div class="order-now" style="width: 100vw; height: 100%; background: white;">
+    <div class="order-now" style="width: 100vw; height: 200vh; background: white;">
         <h1 style="text-transform: uppercase; font-family: Courgette; font-size: 50px; line-height: 1.2; color: #d61c22; padding-top: 5rem; text-align: center;">Order Now</h1>
         <div class="container products" style="background: white; padding-top: 2rem;">
             <div class="row">
-
                     @foreach($foodItems as $foodItem)
                         <div class="col-xs-18 col-sm-6 col-md-3">
                             <div class="thumbnail">
@@ -24,7 +22,6 @@ Food Items - {{$settings["general"]->site_title}}
                                     <p>{{ str_limit(strtolower($foodItem->description), 50) }}</p>
                                     <p><strong>Price: </strong> {{ $foodItem->price }}$</p>
                                     <p class="btn-holder">
-                                
                                     <button 
                                         id="food-item-btn"
                                         data-id="{{ $foodItem->id }}"
@@ -32,7 +29,7 @@ Food Items - {{$settings["general"]->site_title}}
                                         class="btn btn-warning btn-block text-center" 
                                         role="button"
                                     >
-                                        Add to cart
+                                        Add to cart 
                                     </button> 
                                     </p> 
                                 </div>
@@ -98,3 +95,4 @@ Food Items - {{$settings["general"]->site_title}}
 </script>
 @endsection
 
+<p><span style="font-weight: 400; font-size: 20px; color: #5c5c5c; font-family: wassem;">&ldquo;&rdquo;</span></p>

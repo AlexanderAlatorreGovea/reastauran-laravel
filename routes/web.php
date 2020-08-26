@@ -103,6 +103,7 @@ Route::post('/sendemail/send', 'SendEmailController@sendEmail');
 
 // BLOG 
 Route::get('/blog', 'BlogController@allBlogs');
+Route::get('/blog/category/{id}', 'BlogController@blogCategory');
 Route::get('/blog/{slug}', 'BlogController@blog');
 Route::post('/blog/{slug}', 'BlogController@storet');
 // Route::get('/blog/{slug}', 'BlogController@store');

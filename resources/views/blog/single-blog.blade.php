@@ -7,7 +7,7 @@
     <section style="background: white;">
         <div style="margin-top: 4rem;" class="bread-crumb bo5-b p-t-17 p-b-17">
             <div class="container">
-                <a href="index.html" class="txt27">
+                <a href="/" class="txt27">
                     Home
                 </a> 
 
@@ -21,6 +21,7 @@
 
                 <span class="txt29">
                     {{ $article->title }}
+
                 </span>
             </div>
         </div> 
@@ -34,7 +35,7 @@
                             <div class="blo4 p-b-63">
                                 <!-- - -->
                                 <div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
-                                    <a href="blog-detail.html">
+                                    <a>
                                         <img id="lazy" src="{{ $article->image_url }}"  alt="IMG-BLOG">
                                     </a>
 
@@ -188,40 +189,20 @@
                             </h4>
 
                             <ul>
-                                <li class="bo5-b p-t-8 p-b-8">
-                                    <a href="#" class="txt27">
-                                        Cooking recipe
-                                    </a>
-                                </li>
-
-                                <li class="bo5-b p-t-8 p-b-8">
-                                    <a href="#" class="txt27">
-                                        Delicious foods
-                                    </a>
-                                </li>
-
-                                <li class="bo5-b p-t-8 p-b-8">
-                                    <a href="#" class="txt27">
-                                        Events Design
-                                    </a>
-                                </li>
-
-                                <li class="bo5-b p-t-8 p-b-8">
-                                    <a href="#" class="txt27">
-                                        Restaurant Place
-                                    </a>
-                                </li>
-
-                                <li class="bo5-b p-t-8 p-b-8">
-                                    <a href="#" class="txt27">
-                                        WordPress
-                                    </a>
-                                </li>
+                                @foreach ($categories as $item)
+                                    <li class="bo5-b p-t-8 p-b-8">
+                                        
+                                        <a href="{{ url("/blog/category/$item->id") }}" class="txt27">
+                                            {{ $item->name }}
+                                        </a>
+                                    </li>
+                                @endforeach
+                                
                             </ul>
-                        </div>
+                        </div> 
 
                         <!-- Most Popular -->
-                        <div class="popular">
+                        {{-- <div class="popular">
                             <h4 class="txt33 p-b-35 p-t-58">
                                 Most popular
                             </h4>
@@ -317,7 +298,7 @@
                                     </div>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
 
 
                         <!-- Archive -->

@@ -94,9 +94,9 @@ class StaticPagesController extends Controller {
 
         return view('menu/all-categories', [
             'categories' => $categories
-        ]);
+        ]); 
     }
-
+ 
     public function singleMenu($slug){
         $foodCategory = FoodCategory::where('title', '=', $slug)->first();
         $foodItems = FoodItem::where('category_id', '=', $foodCategory->id)->get();
@@ -123,6 +123,7 @@ class StaticPagesController extends Controller {
         request()->validate([
             'email' => ['required', 'string'],
         ]);
+        
         $member = new SpecialOffer();
         $member->email = request('email');
 

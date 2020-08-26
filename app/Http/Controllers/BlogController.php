@@ -16,7 +16,7 @@ class BlogController extends Controller
      */
 
     public function allBlogs()  
-    { 
+    {  
         $blogs = Blog::paginate(4);
         $categories = Category::all(); 
         //$blog = Blog::all();
@@ -40,14 +40,26 @@ class BlogController extends Controller
         return view('blog.all-blogs', [ 
             "blogs" => $blogs,
             "categories" => $categories
-        ]); 
+        ]);  
     }  
+
+    public function blogCategory($id) {
+        $category = Category::where('id', $id)->first();
+        $blogs = Blog::where('category_id', '=', $category->id)->paginate(4); //->get();
+        $categories = Category::all(); 
+
+        return view('blog.all-blogs', [ 
+            "blogs" => $blogs, 
+            "categories" => $categories
+        ]);  
+    }
  
     public function blog($slug)
     {     
         $title = str_replace('-', ' ', strtoupper($slug));
         $article = Blog::where('title', $title)->first();
         $comments = Comment::all(); 
+        $categories = Category::all(); 
         //$comments = Comment::all();
         //dd($comments);
         //dd($comments);
@@ -60,15 +72,11 @@ class BlogController extends Controller
        
         //$comment = $post->comments->first();
         return view('blog.single-blog', [
-            'article' => $article,
-            'comments' => $comments
+            "article" => $article,
+            "comments" => $comments,
+            "categories" => $categories
         ]);
     }   
-
-    public function category()
-    {
-
-    }
 
     public function storet(Request $request, $slug)
     { 
