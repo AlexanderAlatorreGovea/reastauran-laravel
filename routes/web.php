@@ -117,6 +117,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// TEST ROUTE:
+Route::get('/menu/burgers', function () {
+    return 'Testing route!';
+});
+
 View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'pages/thank-you', 'pages/sign-up-thanks', 'menu.menu', 'menu.all-categories', 'menu.all-menu-items', 'menu.single-menu', 'cart/cart', 'cart/checkout', 'blog/all-blogs', 'blog/single-blog'], function ($view) {
     $generalSettings = GeneralSetting::find(1);
     $socialSettings = SocialSetting::find(1);
