@@ -21,14 +21,8 @@ COPY . .
 # Install dependencies
 RUN composer install --no-interaction --optimize-autoloader
 
-# Set the DocumentRoot to /var/www/html/public
+# **Set the DocumentRoot to /var/www/html/public**
 RUN sed -i 's|/var/www/html|/var/www/html/public|g' /etc/apache2/sites-available/000-default.conf
-
-# Enable mod_rewrite
-RUN a2enmod rewrite
-
-# Allow .htaccess Overrides
-RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 
 # Copy the startup script
 COPY run-apache2.sh /usr/local/bin/run-apache2.sh
