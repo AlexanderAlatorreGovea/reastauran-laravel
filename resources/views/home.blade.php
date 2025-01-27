@@ -40,3 +40,7 @@
   @include('includes.food-categories-slider')
   @include('includes.footer') 
 @endsection
+
+
+heroku config:set APP_KEY=base64:VrnWeaXW85noxywfWdlYicJ0vvhknciJptav9WoQpwo= \
+  -a billy-restaurant-govea

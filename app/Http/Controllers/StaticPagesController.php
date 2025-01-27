@@ -127,7 +127,6 @@ class StaticPagesController extends Controller {
         $member = new SpecialOffer();
         $member->email = request('email');
 
-        $member->save();
 
         return redirect('/pages/sign-up-thanks');
     }

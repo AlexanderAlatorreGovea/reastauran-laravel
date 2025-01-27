@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Str;
 
-return [
+$config = [
 
     /*
     |--------------------------------------------------------------------------
@@ -145,3 +145,17 @@ return [
     ],
 
 ];
+
+if (env('JAWSDB_URL')) {
+    $jawsdbUrl = parse_url(env('JAWSDB_URL'));
+
+    $config['connections']['mysql']['host']     = $jawsdbUrl['host']     ?? $config['connections']['mysql']['host'];
+    $config['connections']['mysql']['port']     = $jawsdbUrl['port']     ?? $config['connections']['mysql']['port'];
+    $config['connections']['mysql']['database'] = isset($jawsdbUrl['path'])
+        ? ltrim($jawsdbUrl['path'], '/')
+        : $config['connections']['mysql']['database'];
+    $config['connections']['mysql']['username'] = $jawsdbUrl['user']     ?? $config['connections']['mysql']['username'];
+    $config['connections']['mysql']['password'] = $jawsdbUrl['pass']     ?? $config['connections']['mysql']['password'];
+}
+
+return $config;

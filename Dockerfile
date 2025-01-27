@@ -7,42 +7,29 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     unzip \
     sed \
-    && docker-php-ext-install intl mbstring zip \
+    && docker-php-ext-install intl mbstring zip pdo_mysql \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install Composer 1.x
 COPY --from=composer:1.10 /usr/bin/composer /usr/bin/composer
 
-# Verify Composer version
-RUN composer --version
-
-# Disable all MPMs and enable only mpm_event
-RUN a2dismod mpm_prefork mpm_worker mpm_event || true && \
-    a2enmod mpm_event
-
-# Set working directory
 WORKDIR /var/www/html
 
-# Copy composer files first for caching
-COPY composer.json composer.lock ./
-
-# Install PHP dependencies inside Docker
-RUN composer install --no-interaction --optimize-autoloader
-
-# Copy the rest of the application files
+# Copy entire codebase
 COPY . .
 
-# Copy the startup script into the container
-COPY run-apache2.sh /usr/local/bin/run-apache2.sh
+# Install dependencies
+RUN composer install --no-interaction --optimize-autoloader
 
-# Ensure the startup script is executable
+# **Set the DocumentRoot to /var/www/html/public**
+RUN sed -i 's|/var/www/html|/var/www/html/public|g' /etc/apache2/sites-available/000-default.conf
+
+# Copy the startup script
+COPY run-apache2.sh /usr/local/bin/run-apache2.sh
 RUN chmod +x /usr/local/bin/run-apache2.sh
 
-# Ensure storage and cache directories are writable
+# Fix permissions for Laravel
 RUN chown -R www-data:www-data storage bootstrap/cache
 
-# Expose port 80 (optional, as Heroku manages the port)
 EXPOSE 80
-
-# Set the startup script as the container's entrypoint
 CMD ["run-apache2.sh"]
