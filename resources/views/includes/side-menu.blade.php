@@ -15,9 +15,9 @@
       <li>
         <a href="/all-menu-items">Order Now</a>
       </li>
-      <li>
+      <!-- <li>
         <a href="/blog">Blog</a>
-      </li>
+      </li> -->
       <li>
         <a href="/about">About Us</a>
       </li>
