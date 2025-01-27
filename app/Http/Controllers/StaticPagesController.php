@@ -98,6 +98,7 @@ class StaticPagesController extends Controller {
     }
  
     public function singleMenu($slug){
+        \Log::info("Single menu accessed with slug: " . $slug);
         $foodCategory = FoodCategory::where('title', '=', $slug)->first();
         $foodItems = FoodItem::where('category_id', '=', $foodCategory->id)->get();
 
