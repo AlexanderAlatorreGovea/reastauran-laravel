@@ -94,5 +94,3 @@ Food Items - {{$settings["general"]->site_title}}
     }))
 </script>
 @endsection
-
-<p><span style="font-weight: 400; font-size: 20px; color: #5c5c5c; font-family: wassem;">&ldquo;&rdquo;</span></p>

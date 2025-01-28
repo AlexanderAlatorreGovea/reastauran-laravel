@@ -15,7 +15,7 @@ class FoodItem extends Seeder
         DB::table('food_items')->insert([
             'title' => 'Texas Burger',
             'description' => 'Charbroiled Black Angus Beef Patty, Two Slices of American Cheese, Two Slices, Mayonnaise and Ketchup Wrapped in Fresh Iceberg Whole-Leaf Lettuce',
-            'image_url' => 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25d45014-8cc3-4c98-b02c-5a0cf3a55ddd/dcgotp7-361e4632-4c86-4ab2-b562-d07a3f22138c.png/v1/fill/w_900,h_900,strp/black_burger_on_a_transparent_background_by_prussiaart_dcgotp7-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMjVkNDUwMTQtOGNjMy00Yzk4LWIwMmMtNWEwY2YzYTU1ZGRkXC9kY2dvdHA3LTM2MWU0NjMyLTRjODYtNGFiMi1iNTYyLWQwN2EzZjIyMTM4Yy5wbmciLCJoZWlnaHQiOiI8PTkwMCIsIndpZHRoIjoiPD05MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uud2F0ZXJtYXJrIl0sIndtayI6eyJwYXRoIjoiXC93bVwvMjVkNDUwMTQtOGNjMy00Yzk4LWIwMmMtNWEwY2YzYTU1ZGRkXC9wcnVzc2lhYXJ0LTQucG5nIiwib3BhY2l0eSI6OTUsInByb3BvcnRpb25zIjowLjQ1LCJncmF2aXR5IjoiY2VudGVyIn19.N8zAuU94mJFgOlf4Ta3xl1xt7KYMD2xgDNgQOp_vnzM',
+            'image_url' => '/img/hiclipart.com (8).png',
             'price' => 9.99,
             'category_id' => 2,
             'updated_at' => Carbon::now(), 
@@ -24,7 +24,7 @@ class FoodItem extends Seeder
         DB::table('food_items')->insert([
             'title' => 'BBQ Burger',
             'description' => 'Charbroiled Black Angus Beef Patty, Two Slices of American Cheese, Two Slices, Mayonnaise and Ketchup Wrapped in Fresh Iceberg Whole-Leaf Lettuce',
-            'image_url' => 'https://i2.wp.com/freepngimages.com/wp-content/uploads/2016/11/bacon-burger.png?fit=895%2C895',
+            'image_url' => '/img/hiclipart.com (8).png',
             'price' => 9.99, 
             'category_id' => 2,
             'updated_at' => Carbon::now(), 
