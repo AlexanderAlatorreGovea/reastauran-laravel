@@ -24,12 +24,12 @@ class StaticPagesController extends Controller {
     }
 
     public function about(){
-        return view('pages.about');
+        return view('about');
     }
 
     public function reservations(){
         return view('pages.reservations');
-    }
+    } 
 
     public function routeNotificationForNexmo($notification) {
         return $this->phone_number;
