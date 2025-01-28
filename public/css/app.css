@@ -13169,7 +13169,7 @@ body {
   transition: all 0.5s ease-in-out;
   display: none;
   transform: translate3d(-300px, 0px, 0px);
-  display: none;
+  display: none !important;
 }
 
 #app-layout .side-menu .logo {
