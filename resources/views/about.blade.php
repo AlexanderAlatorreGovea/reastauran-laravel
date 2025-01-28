@@ -4,7 +4,7 @@
 About - {{$settings["general"]->site_title}} 
 @endsection
 
-@section('content') 
+@section('content')
     @if ($message = Session::get('success'))
         <div id="message" class="alert alert-success alert-block" style="margin-bottom: 0px">
           <button id="close" type="button" class="close" data-dismiss="alert">×</button>
