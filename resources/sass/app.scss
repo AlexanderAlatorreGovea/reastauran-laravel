@@ -61,7 +61,7 @@ body {
         z-index: 2;
         transition: all .5s ease-in-out;
         /*CAN BE REMOVED*/
-        display: none; 
+        display: none !important;
         transform: translate3d(-300px, 0px, 0px);
         .logo {
             display: flex;
