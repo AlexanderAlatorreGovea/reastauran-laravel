@@ -24,11 +24,11 @@ class StaticPagesController extends Controller {
     }
 
     public function about(){
-        return view('pages/about');
+        return view('pages.about');
     }
 
     public function reservations(){
-        return view('pages/reservations');
+        return view('pages.reservations');
     }
 
     public function routeNotificationForNexmo($notification) {
@@ -62,11 +62,11 @@ class StaticPagesController extends Controller {
     }
 
     public function contact(){
-        return view('pages/contact');
+        return view('pages.contact');
     }
 
     public function offers(){
-        return view('pages/offers');
+        return view('pages.offers');
     }
     public function registerMember(){
         request()->validate([
@@ -86,13 +86,13 @@ class StaticPagesController extends Controller {
     }
 
     public function thankYou(){
-        return view('pages/thank-you');
+        return view('pages.thank-you');
     }
 
     public function menu(){
         $categories = FoodCategory::all();
 
-        return view('menu/all-categories', [
+        return view('menu.all-categories', [
             'categories' => $categories
         ]); 
     }
@@ -102,7 +102,7 @@ class StaticPagesController extends Controller {
         $foodCategory = FoodCategory::where('title', '=', $slug)->first();
         $foodItems = FoodItem::where('category_id', '=', $foodCategory->id)->get();
 
-        return view('menu/single-menu', [
+        return view('menu.single-menu', [
             "foodItem" => ucfirst($slug),
             "foodItems" => $foodItems
         ]); 
@@ -111,13 +111,13 @@ class StaticPagesController extends Controller {
     public function allMenuItems() {
         $foodItems = FoodItem::all();
        
-        return view('menu/all-menu-items', [
+        return view('menu.all-menu-items', [
             "foodItems" => $foodItems
         ]); 
     }
 
     public function signUpThanks() {
-        return view('pages/sign-up-thanks');
+        return view('pages.sign-up-thanks');
     }
  
     public function specialOffersEmail() {
