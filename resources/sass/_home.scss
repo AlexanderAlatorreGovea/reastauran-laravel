@@ -1,8 +1,4 @@
 .welcome-jumbo {
-  /*CAN BE REMOVED*/ 
-  //transform: translate3d(300px, 0, 0);
-  //max-width: calc(100vw - 300px);
-  //justify-content: center;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -52,23 +48,11 @@
       font-weight: 900;
       align-self: flex-start;
       color: white;
-      /*CAN BE REMOVED*/ 
-      //margin-bottom: 100px;
   }
   .burger-fries {
       width: 100%;
-      // max-width: 1000px;
-      // animation: moveUpandDown 1s linear infinite;
       position: relative;
   }
-  // @keyframes moveUpandDown {
-  //   0%, 100%{
-  //     bottom:0;
-  //   }
-  //   50%{
-  //     bottom:30px;
-  //   }
-  // }
 }
 @media (min-width: 576px) {
 }

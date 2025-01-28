@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 @import "bootstrap.min.css";
 @import "reset";
 @import "cart/cart";
@@ -59,7 +59,7 @@ body {
         height: 100vh;
         width: 300px;
         z-index: 2;
-        transition: all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
         display: none !important;
         transform: translate3d(-300px, 0px, 0px);
         .logo {
@@ -84,7 +84,7 @@ body {
                 a {
                     &:hover {
                         color: red;
-                        transition: all .1s ease-in-out;
+                        transition: all 0.1s ease-in-out;
                     }
                 }
             }
@@ -141,7 +141,7 @@ body {
         }
     }
     #content-section {
-         /*CAN BE REMOVED*/ 
+        /*CAN BE REMOVED*/
         // // transform: translate3d(300px, 0, 0);
         // max-width: calc(100vw - 300px);
         background: #ed4852; /* Old browsers */
@@ -204,7 +204,7 @@ body {
             text-decoration: none;
             color: black;
             font-weight: 700;
-            transition: all .2s ease-in-out;
+            transition: all 0.2s ease-in-out;
             &:hover {
                 color: red;
                 //transition: all .2s ease-in-out;
@@ -303,7 +303,7 @@ body {
         .sliding-system {
             white-space: nowrap;
             transform: translate3d(-0%, 0, 0);
-            transition: all .3s ease-in-out;
+            transition: all 0.3s ease-in-out;
         }
         .slide {
             width: 20%;
@@ -382,11 +382,11 @@ h2 {
     }
     #app-layout {
         .side-menu {
-            transition: all .5s ease-in-out;
+            transition: all 0.5s ease-in-out;
             z-index: 2;
             position: fixed;
             &.open-menu {
-                transition: all .5s ease-in-out;
+                transition: all 0.5s ease-in-out;
                 transform: translate3d(0px, 0, 0);
                 position: fixed;
             }
@@ -429,17 +429,17 @@ h2 {
         width: 100%;
         overflow: auto;
         padding: 20px;
-        .food-slider{
-            .slide{
+        .food-slider {
+            .slide {
                 margin-bottom: 1rem;
                 overflow: hidden;
             }
             .sliding-system {
-            white-space: normal;
-            transform: translate3d(-0%, 0, 0);
+                white-space: normal;
+                transform: translate3d(-0%, 0, 0);
             }
         }
-        
+
         .button-rounded {
             margin-bottom: 2rem;
         }
@@ -470,11 +470,11 @@ h2 {
 @media (min-width: 768px) and (max-width: 991px) {
     #app-layout {
         .side-menu {
-            transition: all .5s ease-in-out;
+            transition: all 0.5s ease-in-out;
             z-index: 2;
             &.open-menu {
                 transform: translate3d(0px, 0, 0);
-                transition: all .5s ease-in-out;
+                transition: all 0.5s ease-in-out;
             }
         }
         .welcome-jumbo {
@@ -490,7 +490,6 @@ h2 {
             padding: 20px;
             overflow-y: scroll;
             transform: translate3d(0, 0, 0);
-
         }
     }
     #information {
@@ -540,9 +539,9 @@ h2 {
     padding: 20px;
 }
 
-.has-error{
-    border-color:#cc0000;
-    background-color:#ffff99;
+.has-error {
+    border-color: #cc0000;
+    background-color: #ffff99;
 }
 
 .shrink-logo {
@@ -600,7 +599,8 @@ input {
     outline: none;
     border: none !important;
 }
-button, input {
+button,
+input {
     overflow: visible;
 }
 
@@ -641,8 +641,9 @@ button, input {
     -moz-transition: all 0.4s;
     transition: all 0.4s;
 }
-[class^="ti-"], [class*=" ti-"] {
-    font-family: 'themify';
+[class^="ti-"],
+[class*=" ti-"] {
+    font-family: "themify";
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -657,22 +658,39 @@ button {
     border: none;
     background: transparent;
 }
-[type=reset], [type=submit], button, html [type=button] {
+[type="reset"],
+[type="submit"],
+button,
+html [type="button"] {
     -webkit-appearance: button;
 }
-button, select {
+button,
+select {
     text-transform: none;
 }
-button, input {
+button,
+input {
     overflow: visible;
 }
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
     margin: 0;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
 }
-[role=button], a, area, button, input, label, select, summary, textarea {
+[role="button"],
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea {
     -ms-touch-action: manipulation;
     touch-action: manipulation;
 }
@@ -707,67 +725,70 @@ button, input, optgroup, select, textarea {
     left: -175% !important;
 }
 
-.commentBox{
+.commentBox {
     margin-top: 40px;
     max-width: 700px;
     padding: 0px 0px 20px 0px;
     border-radius: 20px;
     background: #1b212d;
-  }
-  .post{
+}
+.post {
     background: #fff;
     padding: 20px;
     border-radius: 20px;
-  }
-  .postBody{
+}
+.postBody {
     display: flex;
-  }
-  .postHeader{
+}
+.postHeader {
     display: flex;
     align-items: center;
-  }
-  .publishDate{
+}
+.publishDate {
     color: #787878;
     margin-left: 15px;
-  }
-  .postDesc{
+}
+.postDesc {
     margin-top: 15px;
-  }
+}
 //   i{
 //     color: #fc6f20;
 //     padding-right: 5px;
 //   }
-  
-  .fa-heart:hover::after{
+
+.fa-heart:hover::after {
     position: absolute;
-      margin-top: -4px;
-      margin-left: -20px;
-      content: "❤";
-      font-size: 24px;
-      opacity: 1;
-      animation: hearts .7s ease;
-    
-  } 
-  @keyframes hearts {
-      0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  .postText{
+    margin-top: -4px;
+    margin-left: -20px;
+    content: "❤";
+    font-size: 24px;
+    opacity: 1;
+    animation: hearts 0.7s ease;
+}
+@keyframes hearts {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.postText {
     font-weight: 500;
-  }
-  .desc{
+}
+.desc {
     margin-right: 20px;
-  }
-  .comment{
+}
+.comment {
     padding: 10px;
     margin: 20px 30px;
     color: #bebebe;
-  }
-  .commentContent {
+}
+.commentContent {
     color: black;
-  }
-  .commentAuthor {
+}
+.commentAuthor {
     display: block;
     font-size: 1.17em;
     margin-block-start: 1em;
@@ -776,24 +797,24 @@ button, input, optgroup, select, textarea {
     margin-inline-end: 0px;
     font-weight: bold;
     color: black;
-  }
-  input{
-    font-family: 'Darker Grotesque', sans-serif;
+}
+input {
+    font-family: "Darker Grotesque", sans-serif;
     font-size: 18px;
     border-radius: 15px;
     border: 1px solid #787878;
     padding: 5px 5px 5px 10px;
     transition: 0.2s;
-  }
-  input:focus{
+}
+input:focus {
     outline: none;
     border: 1px solid #fc6f20;
-  }
-  input::placeholder{
+}
+input::placeholder {
     color: #bebebe;
-  }
-  textarea{
-    font-family: 'Darker Grotesque', sans-serif;
+}
+textarea {
+    font-family: "Darker Grotesque", sans-serif;
     margin-top: 10px;
     border-radius: 15px;
     border: 1px solid #787878;
@@ -802,51 +823,49 @@ button, input, optgroup, select, textarea {
     transition: 0.2s;
     box-sizing: border-box;
     resize: none;
-  }
-  textarea:focus{
+}
+textarea:focus {
     outline: none;
     border: 1px solid #fc6f20;
-  }
-  textarea::placeholder{
+}
+textarea::placeholder {
     color: #bebebe;
-  }
+}
 
-
-  .comment-pic {
+.comment-pic {
     max-width: 90px;
     width: 100%;
     height: 100%;
     margin-right: 15px;
     border-radius: 10px;
-  }
-  .comment{
+}
+.comment {
     display: flex;
-  }
-  .commentPic{
+}
+.commentPic {
     max-width: 45px;
     max-height: 45px;
-  }
-  .commentHeader{
+}
+.commentHeader {
     display: flex;
     align-items: center;
-  }
-  .commentBody{
+}
+.commentBody {
     max-width: 580px;
     overflow-wrap: break-word;
-  }
-  .fa-instagram{
+}
+.fa-instagram {
     position: absolute;
     top: 3%;
     right: 2%;
     font-size: 38px;
-  }
-  .fa-instagram:hover{
+}
+.fa-instagram:hover {
     font-size: 42px;
     color: #fff;
-    transition: all .1s linear;
+    transition: all 0.1s linear;
     cursor: pointer;
-  }
-  
+}
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 0px) and (max-width: 768px) {
@@ -860,7 +879,6 @@ button, input, optgroup, select, textarea {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-
 }
 
 // Extra large devices (large desktops, 1200px and up)
