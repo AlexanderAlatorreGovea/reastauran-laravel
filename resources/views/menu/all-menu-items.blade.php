@@ -40,32 +40,9 @@ Food Items - {{$settings["general"]->site_title}}
         </div>
     </div>
 <script>
-    //const foodItemBtn = document.getElementById('food-item-btn');
- 
-    // $("#food-item-btn").click(function (e) {
-    //   //console.log($("#food-item-btn"))
-    //  //foodItemBtn.addEventListener('click', function (e) {
-   
-    //     let food_item_id = ele.attr("data-id");
-    //     let ele = $(this);
-
-    //     $.ajax({
-    //         //url: '{{ url('add-to-cart/'.$foodItem->id) }}',
-    //         url: `add-to-cart/${food_item_id}`,
-    //         method: "POST",
-    //         data: {_token: '{{ csrf_token() }}'},
-    //         //id: ele.attr("data-id"),
-    //         id: food_item_id,
-    //         success: function (response) {
-    //             window.location.reload();
-    //         }
-    //     });
-    // });
-
     const foodItemBtn = document.querySelector('#food-item-btn');
-    console.log(foodItemBtn)
+
     foodItemBtn.addEventListener('submit',(function(e) {
-    //async function post(data) {
         e.preventDefault();
     
         let food_item_id = ele.attr("data-id");

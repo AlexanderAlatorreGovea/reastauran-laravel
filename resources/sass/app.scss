@@ -50,10 +50,6 @@ body {
     font-family: "Roboto", sans-serif;
 }
 #app-layout {
-    /*CAN BE REMOVED*/
-    //display: grid;
-    //height: 100vh;
-    //grid-template-columns: 350px 1fr;
     width: 100vw;
     .side-menu {
         //position: absolute;
@@ -870,4 +866,7 @@ button, input, optgroup, select, textarea {
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+    .side-menu {
+        display: none;
+    }
 }

@@ -143,12 +143,12 @@
 {{-- 
 @section('scripts')  
     <script>
-        const dropdown = document.querySelector('.dropdown');
+    const dropdown = document.querySelector('.dropdown');
     let dropdownMenu = document.querySelector('.dropdown-menu');
     let cartPage = document.URL.includes('cart');
     let menuOpen = false;   
-    console.log(document.URL.includes('cart'))    
-        dropdown.addEventListener('click', () => {
+
+    dropdown.addEventListener('click', () => {
             if (!document.URL.includes('cart')) {
                 if(!menuOpen) {
                     dropdownMenu.classList.add('show');
@@ -167,7 +167,7 @@
         window.onload = function() {
             // Grab features section from the DOM
             var features = document.querySelector('.dropdown');
-            console.log(features)
+
             // Grab dropdown menu from the DOM
             var dropdown = document.getElementsByClassName("dropdown-menu")[0];
             // Creates function to add dropdown menu
