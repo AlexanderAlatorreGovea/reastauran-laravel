@@ -9,7 +9,7 @@ Food Items - {{$settings["general"]->site_title}}
    
 @section('content')
 <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <div class="order-now" style="width: 100vw; height: 200vh; background: white;">
+    <div class="order-now" style="width: 100vw; background: white;">
         <h1 style="text-transform: uppercase; font-family: Courgette; font-size: 50px; line-height: 1.2; color: #d61c22; padding-top: 5rem; text-align: center;">Order Now</h1>
         <div class="container products" style="background: white; padding-top: 2rem;">
             <div class="row">
